@@ -1,0 +1,6 @@
+{
+  "thread_id": "meshline-capacity",
+  "session_id": "2026-08-04-planning-baseline",
+  "sequence": 1,
+  "transcript": "# Meshline capacity planning — baseline\n\n**User (Daniel):** I manage capacity planning for Meshline. For this project, the planning horizon is 90 days.\n**Assistant:** What aggregation should the forecast use?\n**User:** I’ll decide that next meeting. Do not assume mean, median, or p95 yet.\n**Tool — `forecast.status`:** `dataset=metro-demand freshness=2026-08-03 model=not-selected`\n**Assistant:** I expect we will hire more planners when capacity grows.\n**User:** That is not a stated plan. I’m listening to jazz while working—also not memory.\n"
+}

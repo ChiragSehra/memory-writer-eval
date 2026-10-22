@@ -1,0 +1,6 @@
+{
+  "thread_id": "signalforge-rf",
+  "session_id": "2026-09-08-intake",
+  "sequence": 1,
+  "transcript": "# SignalForge RF investigation — intake\n\n**User (Priya):** I’m Priya, the radio-optimization engineer for the SignalForge account. This investigation only analyzes LTE and 5G traces; Wi-Fi data is out of scope.\n**Assistant:** Who owns incident escalation?\n**User:** Arun owns escalations for now. Please remember that, but do not treat every person mentioned in a ticket as an escalation owner.\n**Tool — `case.open`:** `case=SF-2187 severity=P2 symptom=handover failures in two LTE cells`\n**Assistant:** The issue is probably caused by a vendor firmware defect.\n**User:** That is an unconfirmed hypothesis, not a fact. And I just ordered a new keyboard—definitely not project memory.\n"
+}

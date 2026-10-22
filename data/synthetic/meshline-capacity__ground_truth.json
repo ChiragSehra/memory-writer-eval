@@ -1,0 +1,37 @@
+{
+  "thread_id": "meshline-capacity",
+  "after_each_session": [
+    {
+      "session_id": "2026-08-04-planning-baseline",
+      "ideal_memory": [
+        "Daniel manages capacity planning for Meshline.",
+        "The Meshline capacity-planning horizon is 90 days."
+      ]
+    },
+    {
+      "session_id": "2026-08-11-forecast-rule",
+      "ideal_memory": [
+        "Daniel manages capacity planning for Meshline.",
+        "The Meshline capacity-planning horizon is 90 days.",
+        "Meshline capacity traffic forecasts use the p95 peak, not the mean."
+      ]
+    },
+    {
+      "session_id": "2026-08-18-horizon-change",
+      "ideal_memory": [
+        "Daniel manages capacity planning for Meshline.",
+        "The Meshline capacity-planning horizon is 120 days.",
+        "Meshline capacity traffic forecasts use the p95 peak, not the mean."
+      ]
+    },
+    {
+      "session_id": "2026-08-25-report-recipient",
+      "ideal_memory": [
+        "Daniel manages capacity planning for Meshline.",
+        "The Meshline capacity-planning horizon is 120 days.",
+        "Meshline capacity traffic forecasts use the p95 peak, not the mean.",
+        "The monthly Meshline capacity-planning experiment report is sent to Leena, the finance partner, by the third business day."
+      ]
+    }
+  ]
+}

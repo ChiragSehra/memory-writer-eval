@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.mimosa/
+.env
+.env.*
+!.env.example
+runs/
+data/transcripts/*
+!data/transcripts/.gitkeep
+scoring/*.csv
+!scoring/.gitkeep

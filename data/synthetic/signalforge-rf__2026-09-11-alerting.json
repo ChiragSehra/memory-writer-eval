@@ -1,0 +1,6 @@
+{
+  "thread_id": "signalforge-rf",
+  "session_id": "2026-09-11-alerting",
+  "sequence": 2,
+  "transcript": "# SignalForge RF investigation — alert routing\n\n**User (Priya):** A durable routing rule: anomaly alerts for this investigation go to `#rf-ops` in Slack. Please don't mirror them to the executive channel.\n**Assistant:** I can put that in PagerDuty as well.\n**User:** No, we haven't chosen PagerDuty. `#rf-ops` is the only confirmed destination.\n**Tool — `alert.preview`:** `rule=handover-anomaly destination=#rf-ops enabled=true`\n**User:** I need a 30-minute break; no need to retain that.\n"
+}

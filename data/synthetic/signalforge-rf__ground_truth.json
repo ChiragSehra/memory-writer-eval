@@ -1,0 +1,41 @@
+{
+  "thread_id": "signalforge-rf",
+  "after_each_session": [
+    {
+      "session_id": "2026-09-08-intake",
+      "ideal_memory": [
+        "Priya is the radio-optimization engineer for the SignalForge account.",
+        "The SignalForge investigation analyzes LTE and 5G traces only; Wi-Fi data is out of scope.",
+        "Arun owns SignalForge escalations."
+      ]
+    },
+    {
+      "session_id": "2026-09-11-alerting",
+      "ideal_memory": [
+        "Priya is the radio-optimization engineer for the SignalForge account.",
+        "The SignalForge investigation analyzes LTE and 5G traces only; Wi-Fi data is out of scope.",
+        "Arun owns SignalForge escalations.",
+        "SignalForge investigation anomaly alerts go to #rf-ops in Slack."
+      ]
+    },
+    {
+      "session_id": "2026-09-18-owner-change",
+      "ideal_memory": [
+        "Priya is the radio-optimization engineer for the SignalForge account.",
+        "The SignalForge investigation analyzes LTE and 5G traces only; Wi-Fi data is out of scope.",
+        "Meera owns SignalForge escalations.",
+        "SignalForge investigation anomaly alerts go to #rf-ops in Slack."
+      ]
+    },
+    {
+      "session_id": "2026-09-25-delivery",
+      "ideal_memory": [
+        "Priya is the radio-optimization engineer for the SignalForge account.",
+        "The SignalForge investigation analyzes LTE and 5G traces only; Wi-Fi data is out of scope.",
+        "Meera owns SignalForge escalations.",
+        "SignalForge investigation anomaly alerts go to #rf-ops in Slack.",
+        "The SignalForge weekly handover-anomaly digest is published by 16:00 IST every Friday to Meera and #rf-ops."
+      ]
+    }
+  ]
+}
