@@ -10,19 +10,24 @@ from memory_eval.types import CallResult
 
 
 class FakeReader:
+    last_messages = None
+
     def __init__(self, name, settings, runtime):
         pass
 
     def _stream(self, messages, json_mode):
-        self.last_messages = messages
+        FakeReader.last_messages = messages
         return CallResult("Friday", "", None, 0, 12, 1, 0, True)
 
 
 class FakeRubricJudge:
+    calls = 0
+
     def __init__(self, name, settings, runtime):
         self.model = settings["model"]
 
     def _stream(self, messages, json_mode, response_format):
+        FakeRubricJudge.calls += 1
         return CallResult(json.dumps({"nugget_scores": [1, 0.5], "reason": "One complete, one partial."}), "", None, 0, 12, 1, 0, True)
 
 
@@ -53,6 +58,19 @@ class BeamTests(unittest.TestCase):
                 output = answer_beam_probes(run, questions, config, "writer", "local", root / "answers.json", 2)
             self.assertEqual(json.loads(output.read_text())["knowledge_update"][0]["llm_response"], "Friday")
             self.assertEqual(json.loads(output.with_name("answers_metadata.json").read_text())["final_memory_entries"], 1)
+            self.assertIn('"new"', FakeReader.last_messages[1]["content"])
+            self.assertNotIn('"old"', FakeReader.last_messages[1]["content"])
+
+            rows = json.loads((run / "results.json").read_text())
+            (run / "results.json").write_text(json.dumps(list(reversed(rows))))
+            with patch("memory_eval.beam.MemoryWriter", FakeReader):
+                answer_beam_probes(run, questions, config, "writer", "local", root / "reordered_answers.json", 2)
+            self.assertIn('"new"', FakeReader.last_messages[1]["content"])
+
+            rows[1]["session_id"] = "batch-01"
+            (run / "results.json").write_text(json.dumps(rows))
+            with self.assertRaisesRegex(ValueError, "duplicate or missing batches"):
+                answer_beam_probes(run, questions, config, "writer", "local", root / "bad_answers.json", 2)
 
     def test_exploratory_rubric_score_has_explicit_scope(self):
         with tempfile.TemporaryDirectory() as root:
@@ -62,9 +80,18 @@ class BeamTests(unittest.TestCase):
             questions.write_text(json.dumps({"information_extraction": [{"question": "Which day?", "rubric": ["Friday", "Morning"], "ideal_answer": "Friday morning"}]}))
             answers.write_text(json.dumps({"information_extraction": [{"question": "Which day?", "llm_response": "Friday"}]}))
             config = {"local": {}, "openrouter": {"models": [{"name": "judge", "model": "judge"}]}, "runtime": {}, "judge": {"max_output_tokens": 700}}
+            FakeRubricJudge.calls = 0
             with patch("memory_eval.beam.MemoryWriter", FakeRubricJudge):
                 output = score_beam_pilot(answers, questions, config, "judge", root / "scores.json")
             self.assertEqual(json.loads(output.read_text())["information_extraction"][0]["score"], 0.75)
+            self.assertEqual(FakeRubricJudge.calls, 1)
+            with patch("memory_eval.beam.MemoryWriter", FakeRubricJudge):
+                score_beam_pilot(answers, questions, config, "judge", root / "scores.json")
+            self.assertEqual(FakeRubricJudge.calls, 1)
+            answers.write_text(json.dumps({"information_extraction": [{"question": "Which day?", "llm_response": "Saturday"}]}))
+            with patch("memory_eval.beam.MemoryWriter", FakeRubricJudge):
+                score_beam_pilot(answers, questions, config, "judge", root / "scores.json")
+            self.assertEqual(FakeRubricJudge.calls, 2)
             self.assertIn("not a leaderboard-comparable", output.with_suffix(".md").read_text())
 
 

@@ -189,7 +189,10 @@ uv run memory-eval score-beam-pilot scoring/beam_answers.json \
 The pilot measures provider-reported writer input tokens, writer JSON validity,
 final store size, and performance on the 20 official probes. The lightweight
 rubric checker is exploratory and does not reproduce BEAM's official scoring
-pipeline or provide a comparable leaderboard number.
+pipeline or provide a comparable leaderboard number. The local
+`scoring/beam_pilot_audit.md` checks source and question hashes, probe joins,
+and score arithmetic. The original saved rubric records predate input hashes;
+future score runs bind each verdict to its exact question, rubric, and answer.
 
 ## Dated synthetic snapshot
 
