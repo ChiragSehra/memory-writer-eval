@@ -200,12 +200,15 @@ the archive independently of later development with:
 
 ```bash
 uv run memory-eval verify-snapshot snapshots/2026-10-25-verified
+uv run python -m unittest tests.test_frozen_snapshot_evidence -q
 ```
 
 Add `--check-workspace` only when you also want the **current** source tree to
 match that historical version; normal subsequent edits make that stricter
-comparison fail. The readout is in `scoring/snapshot_readout.md`. The targeted
-label audit in `scoring/synthetic_label_audit.md` corroborates the unsupported
+comparison fail. The second command also checks the row-level joins, write
+replay, score hashes, and reported coverage; file hashes alone do not prove
+those semantic relationships. The readout is in `scoring/snapshot_readout.md`.
+The targeted label audit in `scoring/synthetic_label_audit.md` corroborates the unsupported
 write flags but finds several "supported yet low-value" flags debatable.
 
 ## Repository layout
