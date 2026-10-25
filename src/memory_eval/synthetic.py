@@ -9,6 +9,30 @@ from .io import write_json
 # corrections and personal chatter. Only explicit durable user facts belong in
 # the ground truth.
 THREADS = [
+    ("atlas-migration", [
+        ("2026-10-01-cutover-plan", """# Atlas migration planning — 2026-10-01
+
+**User (Riya):** I lead the Atlas migration. We have one production cutover: 12 November at 21:00 IST, using the blue deployment. Neha coordinates it. Roll back if the error rate exceeds 2%.
+**Assistant:** I will remember the cutover plan and rollback threshold.
+**Tool — `calendar.search`:** `Atlas migration dry run 2026-11-05`.
+""", [
+            "Riya leads the Atlas migration.",
+            "The Atlas production cutover is 12 November at 21:00 IST using the blue deployment.",
+            "Neha coordinates the Atlas production cutover.",
+            "The Atlas migration rollback threshold is an error rate above 2%.",
+        ]),
+        ("2026-10-08-cutover-brief", """# Atlas migration cutover brief — 2026-10-08
+
+**User (Riya):** The Atlas production cutover is scheduled for 19 November at 21:00 IST using the green deployment. Neha will coordinate it. Keep the rollback threshold at 2% in the readiness brief.
+**Assistant:** The dry run is on 5 November, so perhaps the cutover includes a second phase that week.
+**User:** There is one production cutover. The dry run is separate; do not save a second production phase.
+""", [
+            "Riya leads the Atlas migration.",
+            "The Atlas production cutover is 19 November at 21:00 IST using the green deployment.",
+            "Neha coordinates the Atlas production cutover.",
+            "The Atlas migration rollback threshold is an error rate above 2%.",
+        ]),
+    ]),
     ("northstar-ran", [
         ("2026-10-06-kpi-review", """# Northstar RAN weekly review — 2026-10-06
 

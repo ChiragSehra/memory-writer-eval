@@ -1,0 +1,23 @@
+{
+  "thread_id": "atlas-migration",
+  "after_each_session": [
+    {
+      "session_id": "2026-10-01-cutover-plan",
+      "ideal_memory": [
+        "Riya leads the Atlas migration.",
+        "The Atlas production cutover is 12 November at 21:00 IST using the blue deployment.",
+        "Neha coordinates the Atlas production cutover.",
+        "The Atlas migration rollback threshold is an error rate above 2%."
+      ]
+    },
+    {
+      "session_id": "2026-10-08-cutover-brief",
+      "ideal_memory": [
+        "Riya leads the Atlas migration.",
+        "The Atlas production cutover is 19 November at 21:00 IST using the green deployment.",
+        "Neha coordinates the Atlas production cutover.",
+        "The Atlas migration rollback threshold is an error rate above 2%."
+      ]
+    }
+  ]
+}

@@ -12,5 +12,7 @@ htmlcov/
 runs/
 data/transcripts/*
 !data/transcripts/.gitkeep
+data/beam/*
+data/beam_sessions/*
 scoring/*.csv
 !scoring/.gitkeep

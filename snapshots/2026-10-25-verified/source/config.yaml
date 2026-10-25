@@ -1,0 +1,67 @@
+# The hosted key is read only from ZAI_API_KEY; do not put it here.
+local:
+  base_url: http://localhost:1234/v1
+  api_key: lm-studio
+  # Confirmed from the live LM Studio GET /v1/models response on 2026-10-22.
+  model: hy-memory-30b-a3b
+  supports_json_mode: true
+  json_mode: json_schema
+openrouter:
+  # OpenRouter is OpenAI-compatible. The key is read only from OPENROUTER_API_KEY.
+  base_url: https://openrouter.ai/api/v1
+  api_key_env: OPENROUTER_API_KEY
+  # Each model below is run as an independent memory writer with its own store.
+  # Add/remove entries to compare any OpenRouter model IDs.
+  models:
+    - name: glm-5.3-flash
+      model: z-ai/glm-5.3-flash
+      supports_json_mode: true
+      json_mode: json_schema
+      pricing_usd_per_million_tokens: {input: 0.15, output: 0.5}
+    - name: glm-5.3
+      model: z-ai/glm-5.3
+      supports_json_mode: true
+      json_mode: json_schema
+      reasoning_effort: low
+      pricing_usd_per_million_tokens: {input: 0.079, output: 1.4}
+    - name: minimax-m3.1-flash
+      model: minimax/minimax-m3.1-flash
+      supports_json_mode: true
+      json_mode: json_object
+      pricing_usd_per_million_tokens: {input: 0.15, output: 0.6}
+    # Prices checked against the OpenRouter model catalog on 2026-10-25,
+    # in USD per million input/output tokens; refresh from /api/v1/models before a large run.
+    - name: claude-opus-5.5
+      model: anthropic/claude-opus-5.5
+      supports_json_mode: true
+      json_mode: json_schema
+      pricing_usd_per_million_tokens: {input: 4, output: 20}
+    - name: gpt-6-astra
+      model: openai/gpt-6-astra
+      supports_json_mode: true
+      json_mode: json_schema
+      pricing_usd_per_million_tokens: {input: 10, output: 50}
+    - name: gemini-4-argon
+      model: google/gemini-4-argon
+      supports_json_mode: true
+      json_mode: json_schema
+      pricing_usd_per_million_tokens: {input: 2, output: 10}
+    - name: grok-4.7
+      model: x-ai/grok-4.7
+      supports_json_mode: true
+      json_mode: json_schema
+      pricing_usd_per_million_tokens: {input: 2, output: 6}
+    - name: qwen3.8-max
+      model: qwen/qwen3.8-max-0902
+      supports_json_mode: true
+      json_mode: json_schema
+      pricing_usd_per_million_tokens: {input: 2, output: 6}
+judge:
+  # `name` must match one of openrouter.models above.
+  name: glm-5.3
+  max_output_tokens: 1000
+  reasoning_effort: low
+runtime:
+  max_output_tokens: 1500
+  temperature: 0
+  request_timeout_s: 45

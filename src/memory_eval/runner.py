@@ -46,17 +46,23 @@ def run_models(config: dict[str, Any], input_dir: str, limit_threads: int | None
         writer = MemoryWriter(name, settings, config["runtime"])
         for thread_id, sessions in threads.items():
             store: list[MemoryEntry] = []
+            recompute_downstream = False
             for session in sessions:
                 raw_path = run_dir / "raw" / name / f"{thread_id}__{session['session_id']}.json"
                 if raw_path.exists():
                     prior = json.loads(raw_path.read_text())
-                    should_retry = selected and retry_errors and bool(prior.get("call", {}).get("error"))
+                    should_retry = selected and retry_errors and (recompute_downstream or bool(prior.get("call", {}).get("error")))
                     if not should_retry:
                         store = [MemoryEntry(**entry) for entry in prior["memory_after"]]
                         all_results.append(prior)
                         continue
+                    recompute_downstream = True
                 elif not selected:
                     continue
+                elif retry_errors:
+                    # A missing checkpoint in a resumed thread also invalidates
+                    # any cached stores that follow it.
+                    recompute_downstream = True
                 before = [entry.__dict__ for entry in store]
                 ops, call = writer.write(prompt, json.dumps(before, ensure_ascii=False), session["transcript"])
                 store = apply_operations(store, ops, session["session_id"])
@@ -87,7 +93,7 @@ def write_report(run_dir: Path, results: list[dict[str, Any]], config: dict[str,
     grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for result in results:
         grouped[result["model"]].append(result)
-    lines = ["# Memory writer evaluation report", "", "## Per-model metrics", "", "| Model | Sessions | Valid JSON | Invalid JSON rate | Retried | Median TTFT | Median total | Decode tok/s | GLM cost |", "|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
+    lines = ["# Memory writer evaluation report", "", "## Per-model metrics", "", "| Model | Sessions | Valid JSON | Invalid JSON rate | Retried | Median TTFT | Median total | Decode tok/s | Estimated API cost |", "|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
     for name, rows in grouped.items():
         calls = [row["call"] for row in rows]
         valid = sum(bool(call.get("json_valid")) for call in calls)
@@ -114,7 +120,7 @@ def write_report(run_dir: Path, results: list[dict[str, Any]], config: dict[str,
     (run_dir / "report.md").write_text("\n".join(lines))
 
 
-def export_blind_sheet(run_dir: str | Path, output: str | Path = "scoring/blind_sheet.csv") -> tuple[Path, Path]:
+def export_blind_sheet(run_dir: str | Path, output: str | Path = "scoring/blind_sheet.csv", input_dir: str | Path = "data/synthetic") -> tuple[Path, Path]:
     """Export only final stores, with a distinct opaque code per model.
 
     Earlier versions mixed entries from intermediate stores and grouped every
@@ -123,6 +129,13 @@ def export_blind_sheet(run_dir: str | Path, output: str | Path = "scoring/blind_
     """
     rows = json.loads((Path(run_dir) / "results.json").read_text())
     items = []
+    threads = load_threads(input_dir)
+    histories: dict[tuple[str, str], str] = {}
+    for thread_id, sessions in threads.items():
+        history = []
+        for session in sessions:
+            history.append(session["transcript"])
+            histories[(thread_id, session["session_id"])] = "\n\n".join(history)
     excerpts = {(row["model"], row["thread_id"], row["session_id"]): row.get("transcript_excerpt", "") for row in rows}
     final_rows: dict[tuple[str, str], dict[str, Any]] = {}
     for row in rows:
@@ -130,12 +143,16 @@ def export_blind_sheet(run_dir: str | Path, output: str | Path = "scoring/blind_
         # checkpoint for a model/thread pair.
         final_rows[(row["model"], row["thread_id"])] = row
     for result in final_rows.values():
+        history = histories.get((result["thread_id"], result["session_id"]))
+        if history is None:
+            raise ValueError(f"Missing transcript history for {result['thread_id']}/{result['session_id']} in {input_dir}")
         for entry in result["memory_after"]:
             excerpt = excerpts.get((result["model"], result["thread_id"], entry["source_session"]), "")
             items.append({
                 "entry": entry["content"],
                 "source_session_excerpt": excerpt,
                 "checkpoint_session": result["session_id"],
+                "transcript_history": history,
                 "model": result["model"],
             })
     import random
@@ -147,10 +164,10 @@ def export_blind_sheet(run_dir: str | Path, output: str | Path = "scoring/blind_
     key_path = output_path.with_name(output_path.stem + "_key.csv")
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", newline="") as file:
-        writer = csv.DictWriter(file, fieldnames=["row_id", "entry", "source_session_excerpt", "checkpoint_session", "correct?(1-5)", "should_be_stored?(y/n)", "notes"])
+        writer = csv.DictWriter(file, fieldnames=["row_id", "entry", "source_session_excerpt", "checkpoint_session", "transcript_history", "correct?(1-5)", "should_be_stored?(y/n)", "notes"])
         writer.writeheader()
         for index, item in enumerate(items, 1):
-            writer.writerow({"row_id": index, "entry": item["entry"], "source_session_excerpt": item["source_session_excerpt"], "checkpoint_session": item["checkpoint_session"]})
+            writer.writerow({"row_id": index, "entry": item["entry"], "source_session_excerpt": item["source_session_excerpt"], "checkpoint_session": item["checkpoint_session"], "transcript_history": item["transcript_history"]})
     with key_path.open("w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=["row_id", "random_code", "model"])
         writer.writeheader()

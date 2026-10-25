@@ -1,0 +1,6 @@
+{
+  "thread_id": "meshline-capacity",
+  "session_id": "2026-08-11-forecast-rule",
+  "sequence": 2,
+  "transcript": "# Meshline capacity planning — forecast decision\n\n**User (Daniel):** Record this decision: capacity traffic forecasts use the p95 peak, not the mean.\n**Assistant:** I’ll use p95. That implies the infrastructure budget will increase.\n**User:** The forecast rule is confirmed; a budget increase is not. Keep those separate.\n**Tool — `forecast.validate`:** `aggregation=p95 test_window=2026-W31 status=pass`\n"
+}

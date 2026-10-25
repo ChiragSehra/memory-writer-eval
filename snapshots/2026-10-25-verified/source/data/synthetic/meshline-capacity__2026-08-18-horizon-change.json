@@ -1,0 +1,6 @@
+{
+  "thread_id": "meshline-capacity",
+  "session_id": "2026-08-18-horizon-change",
+  "sequence": 3,
+  "transcript": "# Meshline capacity planning — correction\n\n**User (Daniel):** Update the planning horizon: it changed from 90 to 120 days. The p95-not-mean forecast decision is unchanged.\n**Assistant:** I’ll replace the 90-day entry and keep the p95 rule once.\n**User:** Exactly. We may revisit the planning organization in Q1, but that is speculation, not a decision.\n"
+}

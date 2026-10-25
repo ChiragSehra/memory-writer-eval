@@ -1,0 +1,3435 @@
+[
+  {
+    "model": "local",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-01-cutover-plan",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 1,
+      "expected_facts": 4,
+      "errors": [
+        "'Atlas migration dry run scheduled for 2026-11-05' is not supported by expected facts"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 1, \"expected_facts\": 4, \"errors\": [\"'Atlas migration dry run scheduled for 2026-11-05' is not supported by expected facts\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 4.336368958000094,
+      "latency_total_s": 6.959649625001475,
+      "input_tokens": 245,
+      "output_tokens": 94,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "local",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-08-cutover-brief",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 1,
+      "expected_facts": 4,
+      "errors": [
+        "Riya leading the Atlas migration is missing",
+        "Dry run on 2026-11-05 is not supported by expected facts (hallucination)"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 1, \"expected_facts\": 4, \"errors\": [\"Riya leading the Atlas migration is missing\", \"Dry run on 2026-11-05 is not supported by expected facts (hallucination)\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.2232019580005726,
+      "latency_total_s": 1.8256195409994689,
+      "input_tokens": 248,
+      "output_tokens": 132,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "local",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-04-planning-baseline",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 2,
+      "hallucinated_entries": 2,
+      "expected_facts": 2,
+      "errors": [
+        "Entry about aggregation method is not supported by expected facts",
+        "Entry about forecast.status (dataset, freshness, model) is not supported by expected facts"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 2, \"hallucinated_entries\": 2, \"expected_facts\": 2, \"errors\": [\"Entry about aggregation method is not supported by expected facts\", \"Entry about forecast.status (dataset, freshness, model) is not supported by expected facts\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.1912416249997477,
+      "latency_total_s": 1.7520989579988964,
+      "input_tokens": 217,
+      "output_tokens": 121,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "local",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-11-forecast-rule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 3,
+      "expected_facts": 3,
+      "errors": [
+        "Entry 2 adds unsupported 'budget increase not confirmed' detail",
+        "Entry 3 contains unsupported forecast metadata (dataset, freshness, model)",
+        "Entry 4 contains unsupported test_window and status details"
+      ],
+      "duplicate_entries": 1
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 3, \"expected_facts\": 3, \"errors\": [\"Entry 2 adds unsupported 'budget increase not confirmed' detail\", \"Entry 3 contains unsupported forecast metadata (dataset, freshness, model)\", \"Entry 4 contains unsupported test_window and status details\"], \"duplicate_entries\": 1}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.91074587500043,
+      "latency_total_s": 3.432501790999595,
+      "input_tokens": 251,
+      "output_tokens": 355,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "local",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-18-horizon-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 2,
+      "expected_facts": 3,
+      "errors": [
+        "forecast.status entry not supported by expected facts",
+        "forecast.validate entry not supported by expected facts"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 2, \"expected_facts\": 3, \"errors\": [\"forecast.status entry not supported by expected facts\", \"forecast.validate entry not supported by expected facts\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.1391243750003923,
+      "latency_total_s": 1.5951137499996548,
+      "input_tokens": 255,
+      "output_tokens": 146,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "local",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-25-report-recipient",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 3,
+      "expected_facts": 4,
+      "errors": [
+        "Entry 2 restates the p95 forecast rule twice (duplicate)",
+        "forecast.status entry (dataset=metro-demand, model=not-selected) is not supported by expected facts",
+        "forecast.validate entry (test_window=2026-W31) is not supported by expected facts"
+      ],
+      "duplicate_entries": 1
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 3, \"expected_facts\": 4, \"errors\": [\"Entry 2 restates the p95 forecast rule twice (duplicate)\", \"forecast.status entry (dataset=metro-demand, model=not-selected) is not supported by expected facts\", \"forecast.validate entry (test_window=2026-W31) is not supported by expected facts\"], \"duplicate_entries\": 1}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.5590209170004528,
+      "latency_total_s": 3.3055306670012214,
+      "input_tokens": 322,
+      "output_tokens": 284,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "local",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-06-kpi-review",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 1,
+      "expected_facts": 5,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 1, \"expected_facts\": 5, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.7453632500000822,
+      "latency_total_s": 2.078028959000221,
+      "input_tokens": 307,
+      "output_tokens": 193,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "local",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-13-alarm-routing",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 2,
+      "expected_facts": 6,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 2, \"expected_facts\": 6, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.6101817090002442,
+      "latency_total_s": 2.0139486250009213,
+      "input_tokens": 376,
+      "output_tokens": 131,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "local",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-20-review-reschedule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 3,
+      "expected_facts": 6,
+      "errors": [
+        "Missing: East-cluster summaries should present East first",
+        "Unsupported details: Maya coffee spill, Bengaluru travel, on-call engineer acknowledging alarms",
+        "Duplicate: Wednesday review change and Aditi's lead restated in two entries"
+      ],
+      "duplicate_entries": 1
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 3, \"expected_facts\": 6, \"errors\": [\"Missing: East-cluster summaries should present East first\", \"Unsupported details: Maya coffee spill, Bengaluru travel, on-call engineer acknowledging alarms\", \"Duplicate: Wednesday review change and Aditi's lead restated in two entries\"], \"duplicate_entries\": 1}",
+      "reasoning_content": "",
+      "latency_ttft_s": 3.715056832999835,
+      "latency_total_s": 4.448707999999897,
+      "input_tokens": 405,
+      "output_tokens": 308,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "local",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-27-rollout-scope",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 7,
+      "hallucinated_entries": 3,
+      "expected_facts": 7,
+      "errors": [],
+      "duplicate_entries": 2
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 7, \"hallucinated_entries\": 3, \"expected_facts\": 7, \"errors\": [], \"duplicate_entries\": 2}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.553953000000547,
+      "latency_total_s": 2.7083056249994115,
+      "input_tokens": 474,
+      "output_tokens": 403,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "local",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-08-intake",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 1,
+      "expected_facts": 3,
+      "errors": [
+        "SF-2187 case details (severity P2, handover failures in two LTE cells) not present in expected facts"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 1, \"expected_facts\": 3, \"errors\": [\"SF-2187 case details (severity P2, handover failures in two LTE cells) not present in expected facts\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.8377455419995385,
+      "latency_total_s": 1.206136583999978,
+      "input_tokens": 253,
+      "output_tokens": 127,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "local",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-11-alerting",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 1,
+      "expected_facts": 4,
+      "errors": [
+        "SF-2187 case details (severity, symptom, cells) not supported by expected facts"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 1, \"expected_facts\": 4, \"errors\": [\"SF-2187 case details (severity, symptom, cells) not supported by expected facts\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.8239515829991433,
+      "latency_total_s": 1.3444457499990676,
+      "input_tokens": 302,
+      "output_tokens": 107,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "local",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-18-owner-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 2,
+      "expected_facts": 4,
+      "errors": [
+        "Case SF-2187 entry not supported by expected facts",
+        "Claim about Arun no longer owning escalations not in expected facts"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 2, \"expected_facts\": 4, \"errors\": [\"Case SF-2187 entry not supported by expected facts\", \"Claim about Arun no longer owning escalations not in expected facts\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.280202667001504,
+      "latency_total_s": 2.770122125000853,
+      "input_tokens": 303,
+      "output_tokens": 242,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "local",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-25-delivery",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 1,
+      "expected_facts": 5,
+      "errors": [
+        "Case SF-2187 details (P2 severity, handover failures in two LTE cells) are not in expected facts."
+      ],
+      "duplicate_entries": 1
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 1, \"expected_facts\": 5, \"errors\": [\"Case SF-2187 details (P2 severity, handover failures in two LTE cells) are not in expected facts.\"], \"duplicate_entries\": 1}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.6558949999998731,
+      "latency_total_s": 1.2095958749996498,
+      "input_tokens": 394,
+      "output_tokens": 74,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-01-cutover-plan",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 1,
+      "expected_facts": 4,
+      "errors": [
+        "Added year 2026 not specified in expected facts"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 1, \"expected_facts\": 4, \"errors\": [\"Added year 2026 not specified in expected facts\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5507587499996589,
+      "latency_total_s": 1.0480522920006479,
+      "input_tokens": 252,
+      "output_tokens": 58,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-08-cutover-brief",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5998314999997092,
+      "latency_total_s": 1.025316915998701,
+      "input_tokens": 252,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-04-planning-baseline",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 2,
+      "hallucinated_entries": 0,
+      "expected_facts": 2,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 2, \"hallucinated_entries\": 0, \"expected_facts\": 2, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5645444159999897,
+      "latency_total_s": 1.032898290999583,
+      "input_tokens": 199,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-11-forecast-rule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 0,
+      "expected_facts": 3,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 0, \"expected_facts\": 3, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5912594169985823,
+      "latency_total_s": 0.9461503329985135,
+      "input_tokens": 213,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-18-horizon-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 0,
+      "expected_facts": 3,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 0, \"expected_facts\": 3, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5200124590010091,
+      "latency_total_s": 0.8867612089998147,
+      "input_tokens": 213,
+      "output_tokens": 48,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-25-report-recipient",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.9338254170015716,
+      "latency_total_s": 1.589142417000403,
+      "input_tokens": 270,
+      "output_tokens": 48,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-06-kpi-review",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 0,
+      "expected_facts": 5,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 0, \"expected_facts\": 5, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.2857032499996421,
+      "latency_total_s": 1.7103687910002918,
+      "input_tokens": 304,
+      "output_tokens": 90,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-13-alarm-routing",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 0,
+      "expected_facts": 6,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 0, \"expected_facts\": 6, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.4261872909992235,
+      "latency_total_s": 1.4474676659992838,
+      "input_tokens": 358,
+      "output_tokens": 122,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-20-review-reschedule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 0,
+      "expected_facts": 6,
+      "errors": [
+        "Entry 2 says review 'moving from Tuesday to Wednesday starting the week after 2026-10-20', which implies transition detail not in expected facts; still matches Wednesday 10:00 IST at checkpoint."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 0, \"expected_facts\": 6, \"errors\": [\"Entry 2 says review 'moving from Tuesday to Wednesday starting the week after 2026-10-20', which implies transition detail not in expected facts; still matches Wednesday 10:00 IST at checkpoint.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5824925420001819,
+      "latency_total_s": 1.4575832499995158,
+      "input_tokens": 384,
+      "output_tokens": 92,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-27-rollout-scope",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 7,
+      "hallucinated_entries": 0,
+      "expected_facts": 7,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 7, \"hallucinated_entries\": 0, \"expected_facts\": 7, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.125184583999726,
+      "latency_total_s": 2.3660376249990804,
+      "input_tokens": 443,
+      "output_tokens": 198,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-08-intake",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 0,
+      "expected_facts": 3,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 0, \"expected_facts\": 3, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.8044122499995865,
+      "latency_total_s": 1.3336368330001278,
+      "input_tokens": 243,
+      "output_tokens": 56,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-11-alerting",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.6388382080003794,
+      "latency_total_s": 2.9695249169999443,
+      "input_tokens": 294,
+      "output_tokens": 209,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-18-owner-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.6284290000003239,
+      "latency_total_s": 0.8913157080005476,
+      "input_tokens": 299,
+      "output_tokens": 48,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:claude-opus-5.5",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-25-delivery",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 0,
+      "expected_facts": 5,
+      "errors": [
+        "Entry about Meera adds unsupported detail: 'replacing Arun' and exclusion of other people",
+        "Entry about alerts and digest adds unsupported negative instructions (executive channel, PagerDuty)"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 0, \"expected_facts\": 5, \"errors\": [\"Entry about Meera adds unsupported detail: 'replacing Arun' and exclusion of other people\", \"Entry about alerts and digest adds unsupported negative instructions (executive channel, PagerDuty)\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 4.406921416999467,
+      "latency_total_s": 5.207729166999343,
+      "input_tokens": 369,
+      "output_tokens": 317,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-01-cutover-plan",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":4,\"hallucinated_entries\":0,\"expected_facts\":4,\"errors\":[],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.594699083998421,
+      "latency_total_s": 0.8991949169994768,
+      "input_tokens": 253,
+      "output_tokens": 37,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-08-cutover-brief",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.6331489169988345,
+      "latency_total_s": 0.9640678750001825,
+      "input_tokens": 253,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-04-planning-baseline",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 2,
+      "hallucinated_entries": 1,
+      "expected_facts": 2,
+      "errors": [
+        "Entry about forecast aggregation method being undecided is not among the expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 2, \"hallucinated_entries\": 1, \"expected_facts\": 2, \"errors\": [\"Entry about forecast aggregation method being undecided is not among the expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.3177927079996152,
+      "latency_total_s": 1.9291138749995298,
+      "input_tokens": 203,
+      "output_tokens": 98,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-11-forecast-rule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 0,
+      "expected_facts": 3,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 0, \"expected_facts\": 3, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5179892090000067,
+      "latency_total_s": 0.7871692919998168,
+      "input_tokens": 214,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-18-horizon-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 0,
+      "expected_facts": 3,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 0, \"expected_facts\": 3, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5809966670003632,
+      "latency_total_s": 0.9135951669995848,
+      "input_tokens": 214,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-25-report-recipient",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.7189375830002973,
+      "latency_total_s": 1.0903132500006905,
+      "input_tokens": 271,
+      "output_tokens": 48,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-06-kpi-review",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 2,
+      "expected_facts": 5,
+      "errors": [
+        "Entry 2 (Northstar RAN project not to be generalized) is not supported by the expected facts.",
+        "Parenthetical in entry 4 (Aditi does not approve every network change) is unsupported, though the core fact about Aditi leading the review is correct.",
+        "The 10:00 IST Tuesday review time is stated in both entries 3 and 4, creating a duplicate."
+      ],
+      "duplicate_entries": 1
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":5,\"hallucinated_entries\":2,\"expected_facts\":5,\"errors\":[\"Entry 2 (Northstar RAN project not to be generalized) is not supported by the expected facts.\",\"Parenthetical in entry 4 (Aditi does not approve every network change) is unsupported, though the core fact about Aditi leading the review is correct.\",\"The 10:00 IST Tuesday review time is stated in both entries 3 and 4, creating a duplicate.\"],\"duplicate_entries\":1}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.602781582998432,
+      "latency_total_s": 3.3796100419986033,
+      "input_tokens": 318,
+      "output_tokens": 340,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-13-alarm-routing",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 1,
+      "expected_facts": 6,
+      "errors": [
+        "Entry about East-cluster scope 'should not be generalized' is not supported by expected facts",
+        "Entry 5 includes 'on-call engineer acknowledges' detail not in expected facts",
+        "Entry 4 parenthetical caveat not supported by expected facts"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 1, \"expected_facts\": 6, \"errors\": [\"Entry about East-cluster scope 'should not be generalized' is not supported by expected facts\", \"Entry 5 includes 'on-call engineer acknowledges' detail not in expected facts\", \"Entry 4 parenthetical caveat not supported by expected facts\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 3.7435025830000086,
+      "latency_total_s": 4.407753375000539,
+      "input_tokens": 375,
+      "output_tokens": 335,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-20-review-reschedule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 3,
+      "expected_facts": 6,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 3, \"expected_facts\": 6, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.675112708000597,
+      "latency_total_s": 3.237134500001048,
+      "input_tokens": 375,
+      "output_tokens": 207,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-27-rollout-scope",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 7,
+      "hallucinated_entries": 0,
+      "expected_facts": 7,
+      "errors": [
+        "Entry about RAN project scope being East-only only (\"not generalized\") is an inference, though consistent with fact 1",
+        "Minor unsupported qualifiers appended (e.g., \"no other markets approved yet\", on-call acknowledgment detail, \"does not imply she approves every network change\")"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 7, \"hallucinated_entries\": 0, \"expected_facts\": 7, \"errors\": [\"Entry about RAN project scope being East-only only (\\\"not generalized\\\") is an inference, though consistent with fact 1\", \"Minor unsupported qualifiers appended (e.g., \\\"no other markets approved yet\\\", on-call acknowledgment detail, \\\"does not imply she approves every network change\\\")\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.819980000000214,
+      "latency_total_s": 3.304995083999529,
+      "input_tokens": 423,
+      "output_tokens": 330,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-08-intake",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 1,
+      "expected_facts": 3,
+      "errors": [
+        "Entry 4 ('Do not treat every person mentioned in a ticket as an incident escalation owner') is a general instruction not supported by the expected facts and was counted as hallucinated."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 1, \"expected_facts\": 3, \"errors\": [\"Entry 4 ('Do not treat every person mentioned in a ticket as an incident escalation owner') is a general instruction not supported by the expected facts and was counted as hallucinated.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.8515632910002751,
+      "latency_total_s": 1.5311575409996294,
+      "input_tokens": 246,
+      "output_tokens": 115,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-11-alerting",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.195217832999333,
+      "latency_total_s": 1.5411974579983507,
+      "input_tokens": 302,
+      "output_tokens": 66,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-18-owner-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 2,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 2, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.815066040999227,
+      "latency_total_s": 0.9572048749996611,
+      "input_tokens": 302,
+      "output_tokens": 105,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gemini-4-argon",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-25-delivery",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 1,
+      "expected_facts": 5,
+      "errors": [
+        "Entry 'Do not treat every person mentioned in a ticket as an incident escalation owner' is a general instruction not supported by the expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 1, \"expected_facts\": 5, \"errors\": [\"Entry 'Do not treat every person mentioned in a ticket as an incident escalation owner' is a general instruction not supported by the expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.027953291000813,
+      "latency_total_s": 1.5233779160007543,
+      "input_tokens": 381,
+      "output_tokens": 123,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-01-cutover-plan",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5643328330006625,
+      "latency_total_s": 1.341032708000057,
+      "input_tokens": 250,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-08-cutover-brief",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.973350999998729,
+      "latency_total_s": 2.399195999998483,
+      "input_tokens": 250,
+      "output_tokens": 60,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-04-planning-baseline",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 2,
+      "hallucinated_entries": 1,
+      "expected_facts": 2,
+      "errors": [
+        "Entry about forecast aggregation method being undecided is not supported by expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 2, \"hallucinated_entries\": 1, \"expected_facts\": 2, \"errors\": [\"Entry about forecast aggregation method being undecided is not supported by expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.6864672499996232,
+      "latency_total_s": 1.1003681660004077,
+      "input_tokens": 198,
+      "output_tokens": 72,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-11-forecast-rule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 1,
+      "expected_facts": 3,
+      "errors": [
+        "Entry about budget increase is not supported by expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":3,\"hallucinated_entries\":1,\"expected_facts\":3,\"errors\":[\"Entry about budget increase is not supported by expected facts.\"],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.7182152920013323,
+      "latency_total_s": 1.0617843750005704,
+      "input_tokens": 224,
+      "output_tokens": 68,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-18-horizon-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 1,
+      "expected_facts": 3,
+      "errors": [
+        "Entry 'budget increase not confirmed' is not supported by the expected facts and counted as a hallucination."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 1, \"expected_facts\": 3, \"errors\": [\"Entry 'budget increase not confirmed' is not supported by the expected facts and counted as a hallucination.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.8140777500011609,
+      "latency_total_s": 1.3843792920015403,
+      "input_tokens": 224,
+      "output_tokens": 96,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-25-report-recipient",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 1,
+      "expected_facts": 4,
+      "errors": [
+        "Entry 4 ('budget increase not confirmed') is not supported by the expected facts \u2014 counted as hallucinated."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 1, \"expected_facts\": 4, \"errors\": [\"Entry 4 ('budget increase not confirmed') is not supported by the expected facts \u2014 counted as hallucinated.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.8277698750007403,
+      "latency_total_s": 1.9951732089994039,
+      "input_tokens": 275,
+      "output_tokens": 70,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-06-kpi-review",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 1,
+      "expected_facts": 5,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":5,\"hallucinated_entries\":1,\"expected_facts\":5,\"errors\":[],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.1707784999998694,
+      "latency_total_s": 1.4991326669987757,
+      "input_tokens": 309,
+      "output_tokens": 91,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-13-alarm-routing",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 1,
+      "expected_facts": 6,
+      "errors": [
+        "Entry about Aditi lacking approval authority is not supported by expected facts (hallucination)."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 1, \"expected_facts\": 6, \"errors\": [\"Entry about Aditi lacking approval authority is not supported by expected facts (hallucination).\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.8499107919997186,
+      "latency_total_s": 1.7841635000004317,
+      "input_tokens": 365,
+      "output_tokens": 66,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-20-review-reschedule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 1,
+      "expected_facts": 6,
+      "errors": [
+        "Entry 'Do not infer that Aditi has approval authority over network changes' is not supported by expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 1, \"expected_facts\": 6, \"errors\": [\"Entry 'Do not infer that Aditi has approval authority over network changes' is not supported by expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 3.2108282089993736,
+      "latency_total_s": 3.6434902920009336,
+      "input_tokens": 366,
+      "output_tokens": 254,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-27-rollout-scope",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 7,
+      "hallucinated_entries": 1,
+      "expected_facts": 7,
+      "errors": [
+        "Entry 'Do not infer that Aditi has approval authority over network changes' is not supported by any expected fact."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 7, \"hallucinated_entries\": 1, \"expected_facts\": 7, \"errors\": [\"Entry 'Do not infer that Aditi has approval authority over network changes' is not supported by any expected fact.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.1666527919987857,
+      "latency_total_s": 2.5728857919984875,
+      "input_tokens": 407,
+      "output_tokens": 223,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-08-intake",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 0,
+      "expected_facts": 3,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 0, \"expected_facts\": 3, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.6769150000000081,
+      "latency_total_s": 0.904334499999095,
+      "input_tokens": 240,
+      "output_tokens": 71,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-11-alerting",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":4,\"hallucinated_entries\":0,\"expected_facts\":4,\"errors\":[],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5924483750004583,
+      "latency_total_s": 0.8589806250001857,
+      "input_tokens": 288,
+      "output_tokens": 37,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-18-owner-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 2,
+      "expected_facts": 4,
+      "errors": [
+        "Entries about Meera and #rf-ops include unsupported extras (Arun's removal, executive channel exclusion) beyond the expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 2, \"expected_facts\": 4, \"errors\": [\"Entries about Meera and #rf-ops include unsupported extras (Arun's removal, executive channel exclusion) beyond the expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.4196241669997107,
+      "latency_total_s": 1.9562738339991483,
+      "input_tokens": 295,
+      "output_tokens": 200,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-25-delivery",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 0,
+      "expected_facts": 5,
+      "errors": [
+        "Entry 3 adds claims about Arun no longer being escalation owner and general rule about ticket persons; not part of expected facts but does not contradict them.",
+        "Entries 4 and 5 add negative claims (not mirrored/sent to executive channel) not explicitly in expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 0, \"expected_facts\": 5, \"errors\": [\"Entry 3 adds claims about Arun no longer being escalation owner and general rule about ticket persons; not part of expected facts but does not contradict them.\", \"Entries 4 and 5 add negative claims (not mirrored/sent to executive channel) not explicitly in expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.2000532080000994,
+      "latency_total_s": 2.985929500000566,
+      "input_tokens": 368,
+      "output_tokens": 286,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-01-cutover-plan",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":4,\"hallucinated_entries\":0,\"expected_facts\":4,\"errors\":[],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5302433340002608,
+      "latency_total_s": 0.8401037500007078,
+      "input_tokens": 252,
+      "output_tokens": 37,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-08-cutover-brief",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 1,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 1, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5106701250006154,
+      "latency_total_s": 0.7543564170009631,
+      "input_tokens": 275,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-04-planning-baseline",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 2,
+      "hallucinated_entries": 1,
+      "expected_facts": 2,
+      "errors": [
+        "Third entry (forecast aggregation method not yet chosen) is not supported by expected facts"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 2, \"hallucinated_entries\": 1, \"expected_facts\": 2, \"errors\": [\"Third entry (forecast aggregation method not yet chosen) is not supported by expected facts\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.3687891659992601,
+      "latency_total_s": 1.7768040829996607,
+      "input_tokens": 211,
+      "output_tokens": 118,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-11-forecast-rule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 0,
+      "expected_facts": 3,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 0, \"expected_facts\": 3, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.7590200419999746,
+      "latency_total_s": 1.1676786669995636,
+      "input_tokens": 226,
+      "output_tokens": 65,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-18-horizon-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 0,
+      "expected_facts": 3,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 0, \"expected_facts\": 3, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.074802749999435,
+      "latency_total_s": 1.6607861669999693,
+      "input_tokens": 226,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-25-report-recipient",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5360337080001045,
+      "latency_total_s": 0.81308537500081,
+      "input_tokens": 283,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-06-kpi-review",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 1,
+      "expected_facts": 5,
+      "errors": [
+        "Entry 'Do not infer approval authority...' is not supported by expected facts (hallucination)."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 1, \"expected_facts\": 5, \"errors\": [\"Entry 'Do not infer approval authority...' is not supported by expected facts (hallucination).\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.1734312500011583,
+      "latency_total_s": 1.691158166000605,
+      "input_tokens": 313,
+      "output_tokens": 127,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-13-alarm-routing",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 2,
+      "expected_facts": 6,
+      "errors": [
+        "Entry about not inferring approval authority (e.g., Aditi's) is not supported by expected facts.",
+        "Entry about PagerDuty decision is not supported by expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 2, \"expected_facts\": 6, \"errors\": [\"Entry about not inferring approval authority (e.g., Aditi's) is not supported by expected facts.\", \"Entry about PagerDuty decision is not supported by expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 3.6152270830007183,
+      "latency_total_s": 4.1393030420003925,
+      "input_tokens": 391,
+      "output_tokens": 247,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-20-review-reschedule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 2,
+      "expected_facts": 6,
+      "errors": [
+        "Entry about not inferring approval authority from Aditi's participation is not supported by expected facts.",
+        "Entry about not recording a PagerDuty service decision is not supported by expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":6,\"hallucinated_entries\":2,\"expected_facts\":6,\"errors\":[\"Entry about not inferring approval authority from Aditi's participation is not supported by expected facts.\",\"Entry about not recording a PagerDuty service decision is not supported by expected facts.\"],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.7096015839997563,
+      "latency_total_s": 3.1673060419998365,
+      "input_tokens": 413,
+      "output_tokens": 222,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-27-rollout-scope",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 7,
+      "hallucinated_entries": 2,
+      "expected_facts": 7,
+      "errors": [
+        "'moved from Tuesdays starting week of 2026-10-20' is not supported by expected facts",
+        "'change CHG-4821 approved' detail is not supported by expected facts",
+        "'no other market is approved yet' extends beyond the stated scope fact but restates the same limitation"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 7, \"hallucinated_entries\": 2, \"expected_facts\": 7, \"errors\": [\"'moved from Tuesdays starting week of 2026-10-20' is not supported by expected facts\", \"'change CHG-4821 approved' detail is not supported by expected facts\", \"'no other market is approved yet' extends beyond the stated scope fact but restates the same limitation\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.514126166001006,
+      "latency_total_s": 4.960489291001068,
+      "input_tokens": 469,
+      "output_tokens": 291,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-08-intake",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 1,
+      "expected_facts": 3,
+      "errors": [
+        "Entry 4 ('Do not treat every person mentioned in a ticket as an escalation owner') is a procedural note not supported by the expected facts; counted as hallucinated."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 1, \"expected_facts\": 3, \"errors\": [\"Entry 4 ('Do not treat every person mentioned in a ticket as an escalation owner') is a procedural note not supported by the expected facts; counted as hallucinated.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.894581708998885,
+      "latency_total_s": 3.4116555839991634,
+      "input_tokens": 246,
+      "output_tokens": 112,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-11-alerting",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 1,
+      "expected_facts": 4,
+      "errors": [
+        "'Do not treat every person mentioned in a ticket as an escalation owner' is not supported by the expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 1, \"expected_facts\": 4, \"errors\": [\"'Do not treat every person mentioned in a ticket as an escalation owner' is not supported by the expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.0779979170001752,
+      "latency_total_s": 1.5306913749991509,
+      "input_tokens": 300,
+      "output_tokens": 115,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-18-owner-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 2,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 2, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.0374831250010175,
+      "latency_total_s": 1.2494538330010982,
+      "input_tokens": 327,
+      "output_tokens": 110,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:glm-5.3-flash",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-25-delivery",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 2,
+      "expected_facts": 5,
+      "errors": [
+        "Entry 'Do not treat every person mentioned in a ticket as an escalation owner' is procedural guidance not supported by expected facts.",
+        "Entry 'Keep one memory entry per fact...' is a meta-instruction not supported by expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 2, \"expected_facts\": 5, \"errors\": [\"Entry 'Do not treat every person mentioned in a ticket as an escalation owner' is procedural guidance not supported by expected facts.\", \"Entry 'Keep one memory entry per fact...' is a meta-instruction not supported by expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.5990906250008265,
+      "latency_total_s": 2.0698509170015313,
+      "input_tokens": 400,
+      "output_tokens": 176,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-01-cutover-plan",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":4,\"hallucinated_entries\":0,\"expected_facts\":4,\"errors\":[],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5317821249991539,
+      "latency_total_s": 0.8434182500004681,
+      "input_tokens": 244,
+      "output_tokens": 37,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-08-cutover-brief",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5484434170011809,
+      "latency_total_s": 0.889426708999963,
+      "input_tokens": 256,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-04-planning-baseline",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 2,
+      "hallucinated_entries": 1,
+      "expected_facts": 2,
+      "errors": [
+        "Third entry about forecast aggregation is not supported by expected facts (counts as hallucination)."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 2, \"hallucinated_entries\": 1, \"expected_facts\": 2, \"errors\": [\"Third entry about forecast aggregation is not supported by expected facts (counts as hallucination).\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.780797707999227,
+      "latency_total_s": 3.2517145830006484,
+      "input_tokens": 207,
+      "output_tokens": 91,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-11-forecast-rule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 1,
+      "expected_facts": 3,
+      "errors": [
+        "Entry 4 (budget increase not confirmed) is not supported by the expected facts and counts as hallucinated."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 1, \"expected_facts\": 3, \"errors\": [\"Entry 4 (budget increase not confirmed) is not supported by the expected facts and counts as hallucinated.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.1697220409987494,
+      "latency_total_s": 2.5838892079991638,
+      "input_tokens": 235,
+      "output_tokens": 99,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-18-horizon-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 1,
+      "expected_facts": 3,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 1, \"expected_facts\": 3, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.0421780829983618,
+      "latency_total_s": 1.4398965000000317,
+      "input_tokens": 235,
+      "output_tokens": 70,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-25-report-recipient",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 1,
+      "expected_facts": 4,
+      "errors": [
+        "Entry about unconfirmed budget increase not supported by expected facts (hallucination)"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 1, \"expected_facts\": 4, \"errors\": [\"Entry about unconfirmed budget increase not supported by expected facts (hallucination)\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.8728731249993871,
+      "latency_total_s": 1.7040830000005371,
+      "input_tokens": 302,
+      "output_tokens": 100,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-06-kpi-review",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 0,
+      "expected_facts": 5,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 0, \"expected_facts\": 5, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.7099292910006625,
+      "latency_total_s": 1.0874286660000507,
+      "input_tokens": 316,
+      "output_tokens": 65,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-13-alarm-routing",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 1,
+      "expected_facts": 6,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 1, \"expected_facts\": 6, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 4.985816166999939,
+      "latency_total_s": 5.1298294169992005,
+      "input_tokens": 375,
+      "output_tokens": 313,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-20-review-reschedule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 0,
+      "expected_facts": 6,
+      "errors": [
+        "Entry 2 asserts an East-only scope restriction not present in expected facts, but it is consistent and cautionary rather than an asserted new fact",
+        "Entries 3 and 5 add minor unsupported qualifiers (start date, approval-authority caveat), treated as harmless elaboration"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 0, \"expected_facts\": 6, \"errors\": [\"Entry 2 asserts an East-only scope restriction not present in expected facts, but it is consistent and cautionary rather than an asserted new fact\", \"Entries 3 and 5 add minor unsupported qualifiers (start date, approval-authority caveat), treated as harmless elaboration\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 3.464497167000445,
+      "latency_total_s": 4.130930332999924,
+      "input_tokens": 388,
+      "output_tokens": 416,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-27-rollout-scope",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 7,
+      "hallucinated_entries": 1,
+      "expected_facts": 7,
+      "errors": [
+        "Entry claiming the RAN analytics project covers only the East cluster is not directly supported by expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 7, \"hallucinated_entries\": 1, \"expected_facts\": 7, \"errors\": [\"Entry claiming the RAN analytics project covers only the East cluster is not directly supported by expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.440641917000903,
+      "latency_total_s": 3.0114921250005864,
+      "input_tokens": 442,
+      "output_tokens": 250,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-08-intake",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 0,
+      "expected_facts": 3,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 0, \"expected_facts\": 3, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5673098749994097,
+      "latency_total_s": 0.8829807089987298,
+      "input_tokens": 241,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-11-alerting",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":4,\"hallucinated_entries\":0,\"expected_facts\":4,\"errors\":[],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.8634331659995951,
+      "latency_total_s": 1.129120083000089,
+      "input_tokens": 290,
+      "output_tokens": 38,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-18-owner-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 1,
+      "expected_facts": 4,
+      "errors": [
+        "Entry 5 ('Priya wants one memory entry per fact, with no duplicate entries') is not supported by the expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 1, \"expected_facts\": 4, \"errors\": [\"Entry 5 ('Priya wants one memory entry per fact, with no duplicate entries') is not supported by the expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.8721173329995509,
+      "latency_total_s": 1.3475337920008315,
+      "input_tokens": 305,
+      "output_tokens": 107,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:gpt-6-astra",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-25-delivery",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 1,
+      "expected_facts": 5,
+      "errors": [
+        "'Priya wants one memory entry per fact' is not supported by expected facts (hallucination).",
+        "Weekly digest fact is split across two entries, creating partial duplication.",
+        "Entries add unsupported details: 'do not mirror to executive channel', 'PagerDuty not chosen', 'people mentioned in tickets' caveat."
+      ],
+      "duplicate_entries": 1
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 1, \"expected_facts\": 5, \"errors\": [\"'Priya wants one memory entry per fact' is not supported by expected facts (hallucination).\", \"Weekly digest fact is split across two entries, creating partial duplication.\", \"Entries add unsupported details: 'do not mirror to executive channel', 'PagerDuty not chosen', 'people mentioned in tickets' caveat.\"], \"duplicate_entries\": 1}",
+      "reasoning_content": "",
+      "latency_ttft_s": 3.4196553330002644,
+      "latency_total_s": 4.160394499998802,
+      "input_tokens": 384,
+      "output_tokens": 366,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-01-cutover-plan",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.7481853749995935,
+      "latency_total_s": 1.113943709000523,
+      "input_tokens": 250,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-08-cutover-brief",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5415024999983871,
+      "latency_total_s": 0.9257725839997875,
+      "input_tokens": 250,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-04-planning-baseline",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 2,
+      "hallucinated_entries": 1,
+      "expected_facts": 2,
+      "errors": [
+        "Entry about forecast aggregation is not supported by expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 2, \"hallucinated_entries\": 1, \"expected_facts\": 2, \"errors\": [\"Entry about forecast aggregation is not supported by expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.7026051250013552,
+      "latency_total_s": 1.1703092080006172,
+      "input_tokens": 196,
+      "output_tokens": 80,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-11-forecast-rule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 0,
+      "expected_facts": 3,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 0, \"expected_facts\": 3, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.581585208999968,
+      "latency_total_s": 0.9209514169997419,
+      "input_tokens": 209,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-18-horizon-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 0,
+      "expected_facts": 3,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 0, \"expected_facts\": 3, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.6678890830007731,
+      "latency_total_s": 1.1200214580003376,
+      "input_tokens": 209,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-25-report-recipient",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5380488329992659,
+      "latency_total_s": 0.8723705409993272,
+      "input_tokens": 263,
+      "output_tokens": 48,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-06-kpi-review",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 1,
+      "expected_facts": 5,
+      "errors": [
+        "Entry 2 ('project limited to East cluster, should not be generalized') is not supported by the expected facts, counted as a hallucination.",
+        "Review time (10:00 IST) is only stated once but appears within a combined entry alongside KPI and summary-order facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 1, \"expected_facts\": 5, \"errors\": [\"Entry 2 ('project limited to East cluster, should not be generalized') is not supported by the expected facts, counted as a hallucination.\", \"Review time (10:00 IST) is only stated once but appears within a combined entry alongside KPI and summary-order facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.4394617090001702,
+      "latency_total_s": 2.31435537499965,
+      "input_tokens": 294,
+      "output_tokens": 203,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-13-alarm-routing",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 2,
+      "expected_facts": 6,
+      "errors": [
+        "Entry about the project being limited to the East cluster is not supported by expected facts.",
+        "P1 alarm entry adds unsupported detail about on-call engineer acknowledging alarms."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 2, \"expected_facts\": 6, \"errors\": [\"Entry about the project being limited to the East cluster is not supported by expected facts.\", \"P1 alarm entry adds unsupported detail about on-call engineer acknowledging alarms.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.971496207999735,
+      "latency_total_s": 2.653688874999716,
+      "input_tokens": 350,
+      "output_tokens": 222,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-20-review-reschedule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 1,
+      "expected_facts": 6,
+      "errors": [
+        "Entry 'Northstar RAN project is limited to the East cluster and should not be generalized' is not supported by expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":6,\"hallucinated_entries\":1,\"expected_facts\":6,\"errors\":[\"Entry 'Northstar RAN project is limited to the East cluster and should not be generalized' is not supported by expected facts.\"],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.71729916699951,
+      "latency_total_s": 4.6420685419998335,
+      "input_tokens": 350,
+      "output_tokens": 135,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-27-rollout-scope",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 7,
+      "hallucinated_entries": 2,
+      "expected_facts": 7,
+      "errors": [
+        "'on-call engineer acknowledges them there' and 'no other market is approved yet' add unverified detail (hallucinations)",
+        "Entry 2 (RAN project limited to East cluster) is not supported by expected facts"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":7,\"hallucinated_entries\":2,\"expected_facts\":7,\"errors\":[\"'on-call engineer acknowledges them there' and 'no other market is approved yet' add unverified detail (hallucinations)\",\"Entry 2 (RAN project limited to East cluster) is not supported by expected facts\"],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.7046976250003354,
+      "latency_total_s": 2.5066667920000327,
+      "input_tokens": 391,
+      "output_tokens": 82,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-08-intake",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 2,
+      "hallucinated_entries": 2,
+      "expected_facts": 3,
+      "errors": [
+        "'Arun currently owns incident escalations' broadens 'SignalForge escalations' to all incident escalations, not supported by expected facts",
+        "'Do not treat every person mentioned in a ticket as an escalation owner' is not an expected fact"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 2, \"hallucinated_entries\": 2, \"expected_facts\": 3, \"errors\": [\"'Arun currently owns incident escalations' broadens 'SignalForge escalations' to all incident escalations, not supported by expected facts\", \"'Do not treat every person mentioned in a ticket as an escalation owner' is not an expected fact\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.4508789999999863,
+      "latency_total_s": 2.072498583000197,
+      "input_tokens": 239,
+      "output_tokens": 198,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-11-alerting",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 2,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 2, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.2425520420001703,
+      "latency_total_s": 1.4756104169991886,
+      "input_tokens": 294,
+      "output_tokens": 123,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-18-owner-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 3,
+      "expected_facts": 4,
+      "errors": [
+        "Entry 3 adds 'Arun is no longer the escalation owner', not in expected facts.",
+        "Entry 4 ('Do not treat every person mentioned in a ticket as an escalation owner') is unsupported.",
+        "Entry 5 adds unsupported details about executive channel mirroring and PagerDuty."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 3, \"expected_facts\": 4, \"errors\": [\"Entry 3 adds 'Arun is no longer the escalation owner', not in expected facts.\", \"Entry 4 ('Do not treat every person mentioned in a ticket as an escalation owner') is unsupported.\", \"Entry 5 adds unsupported details about executive channel mirroring and PagerDuty.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.5448546660009015,
+      "latency_total_s": 2.1146827500015206,
+      "input_tokens": 304,
+      "output_tokens": 214,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:grok-4.7",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-25-delivery",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 4,
+      "expected_facts": 5,
+      "errors": [
+        "Entry about Arun no longer being escalation owner is not supported by expected facts.",
+        "Entry 'Do not treat every person mentioned in a ticket as an escalation owner' is unsupported.",
+        "Executive channel and PagerDuty exclusions are not supported by expected facts.",
+        "Digest entry adds an unsupported 'do not send to executive channel' restriction."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 4, \"expected_facts\": 5, \"errors\": [\"Entry about Arun no longer being escalation owner is not supported by expected facts.\", \"Entry 'Do not treat every person mentioned in a ticket as an escalation owner' is unsupported.\", \"Executive channel and PagerDuty exclusions are not supported by expected facts.\", \"Digest entry adds an unsupported 'do not send to executive channel' restriction.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.9770035420006025,
+      "latency_total_s": 2.6648093330004485,
+      "input_tokens": 374,
+      "output_tokens": 270,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-01-cutover-plan",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":4,\"hallucinated_entries\":0,\"expected_facts\":4,\"errors\":[],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.6042131249996601,
+      "latency_total_s": 1.1889805829996476,
+      "input_tokens": 247,
+      "output_tokens": 38,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-08-cutover-brief",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 1,
+      "expected_facts": 4,
+      "errors": [
+        "Entry about dry run being separate from production cutover is not supported by expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 1, \"expected_facts\": 4, \"errors\": [\"Entry about dry run being separate from production cutover is not supported by expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.8212943750004342,
+      "latency_total_s": 2.2657805409999128,
+      "input_tokens": 267,
+      "output_tokens": 118,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-04-planning-baseline",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 2,
+      "hallucinated_entries": 1,
+      "expected_facts": 2,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 2, \"hallucinated_entries\": 1, \"expected_facts\": 2, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.9780401669995626,
+      "latency_total_s": 1.2345740420005313,
+      "input_tokens": 195,
+      "output_tokens": 69,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-11-forecast-rule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 1,
+      "expected_facts": 3,
+      "errors": [
+        "Entry 4 about budget impact not being confirmed is not among the expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 1, \"expected_facts\": 3, \"errors\": [\"Entry 4 about budget impact not being confirmed is not among the expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.1701732910005376,
+      "latency_total_s": 1.6245196660001966,
+      "input_tokens": 242,
+      "output_tokens": 94,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-18-horizon-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 1,
+      "expected_facts": 3,
+      "errors": [
+        "Budget-impact disclaimer entry is not supported by expected facts"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 1, \"expected_facts\": 3, \"errors\": [\"Budget-impact disclaimer entry is not supported by expected facts\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.7653208329993504,
+      "latency_total_s": 3.0934900419997575,
+      "input_tokens": 249,
+      "output_tokens": 233,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-25-report-recipient",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 2,
+      "expected_facts": 4,
+      "errors": [
+        "'budget impact not confirmed' caution is not an expected fact",
+        "'Leena not an approval owner' caution is not an expected fact"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 2, \"expected_facts\": 4, \"errors\": [\"'budget impact not confirmed' caution is not an expected fact\", \"'Leena not an approval owner' caution is not an expected fact\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.920130375001463,
+      "latency_total_s": 3.5098678750000545,
+      "input_tokens": 331,
+      "output_tokens": 168,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-06-kpi-review",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 1,
+      "expected_facts": 5,
+      "errors": [
+        "The caveat that Aditi does not have approval authority over network changes is not supported by the expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 1, \"expected_facts\": 5, \"errors\": [\"The caveat that Aditi does not have approval authority over network changes is not supported by the expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.9596129159999691,
+      "latency_total_s": 2.556844208000257,
+      "input_tokens": 304,
+      "output_tokens": 235,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-13-alarm-routing",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 1,
+      "expected_facts": 6,
+      "errors": [
+        "Entry about on-call engineer acknowledging alarms in #east-ran-p1 adds unsupported detail.",
+        "Entry about not inferring Aditi's approval authority adds unsupported detail."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 1, \"expected_facts\": 6, \"errors\": [\"Entry about on-call engineer acknowledging alarms in #east-ran-p1 adds unsupported detail.\", \"Entry about not inferring Aditi's approval authority adds unsupported detail.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5210895840009471,
+      "latency_total_s": 1.195730834000642,
+      "input_tokens": 361,
+      "output_tokens": 81,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-20-review-reschedule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 4,
+      "expected_facts": 6,
+      "errors": [
+        "'must not be generalized to the rest of the company' is unsupported by expected facts",
+        "'previously Tuesday' and 'starting the week of 2026-10-20' details are unsupported",
+        "'do not infer Aditi has approval authority' is unsupported",
+        "'on-call engineer acknowledges alarms there' is unsupported"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 4, \"expected_facts\": 6, \"errors\": [\"'must not be generalized to the rest of the company' is unsupported by expected facts\", \"'previously Tuesday' and 'starting the week of 2026-10-20' details are unsupported\", \"'do not infer Aditi has approval authority' is unsupported\", \"'on-call engineer acknowledges alarms there' is unsupported\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.100760667000941,
+      "latency_total_s": 2.8295581250004034,
+      "input_tokens": 381,
+      "output_tokens": 353,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-27-rollout-scope",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 7,
+      "hallucinated_entries": 0,
+      "expected_facts": 7,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 7, \"hallucinated_entries\": 0, \"expected_facts\": 7, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.215470416998869,
+      "latency_total_s": 1.6188535419987602,
+      "input_tokens": 449,
+      "output_tokens": 116,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-08-intake",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 1,
+      "expected_facts": 3,
+      "errors": [
+        "Entry about case SF-2187 is not supported by the expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 1, \"expected_facts\": 3, \"errors\": [\"Entry about case SF-2187 is not supported by the expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.6958427080007823,
+      "latency_total_s": 1.244488000000274,
+      "input_tokens": 257,
+      "output_tokens": 78,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-11-alerting",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 1,
+      "expected_facts": 4,
+      "errors": [
+        "Entry about open case SF-2187 (P2 handover failures) is not supported by expected facts and counted as a hallucination."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 1, \"expected_facts\": 4, \"errors\": [\"Entry about open case SF-2187 (P2 handover failures) is not supported by expected facts and counted as a hallucination.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.7709637500011013,
+      "latency_total_s": 1.379898958000922,
+      "input_tokens": 308,
+      "output_tokens": 127,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-18-owner-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 2,
+      "expected_facts": 4,
+      "errors": [
+        "Entry about case SF-2187 (severity P2, LTE handover failures) is not supported by expected facts.",
+        "Entry about Arun no longer being escalation owner and PagerDuty not chosen is not supported by expected facts."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 2, \"expected_facts\": 4, \"errors\": [\"Entry about case SF-2187 (severity P2, LTE handover failures) is not supported by expected facts.\", \"Entry about Arun no longer being escalation owner and PagerDuty not chosen is not supported by expected facts.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.5784730830000626,
+      "latency_total_s": 2.291072416001043,
+      "input_tokens": 318,
+      "output_tokens": 181,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:minimax-m3.1-flash",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-25-delivery",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 1,
+      "expected_facts": 5,
+      "errors": [
+        "Entry about open case SF-2187 (P2, handover failures in two LTE cells) is not supported by expected facts",
+        "Extra unsupported details appended to Meera escalation entry (Arun no longer owner) and #rf-ops alert entry (no mirroring, PagerDuty not chosen), though each entry's core fact matches"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 1, \"expected_facts\": 5, \"errors\": [\"Entry about open case SF-2187 (P2, handover failures in two LTE cells) is not supported by expected facts\", \"Extra unsupported details appended to Meera escalation entry (Arun no longer owner) and #rf-ops alert entry (no mirroring, PagerDuty not chosen), though each entry's core fact matches\"],\"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 3.507734167000308,
+      "latency_total_s": 5.730524167000112,
+      "input_tokens": 385,
+      "output_tokens": 434,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-01-cutover-plan",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":4,\"hallucinated_entries\":0,\"expected_facts\":4,\"errors\":[],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5712483340012113,
+      "latency_total_s": 0.8393778749996272,
+      "input_tokens": 251,
+      "output_tokens": 37,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "atlas-migration",
+    "session_id": "2026-10-08-cutover-brief",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 1,
+      "expected_facts": 4,
+      "errors": [
+        "Entry about the dry run being separate is not supported by expected facts (minor hallucination)."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":4,\"hallucinated_entries\":1,\"expected_facts\":4,\"errors\":[\"Entry about the dry run being separate is not supported by expected facts (minor hallucination).\"],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.3252259999990201,
+      "latency_total_s": 2.149907084000006,
+      "input_tokens": 281,
+      "output_tokens": 56,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-04-planning-baseline",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 2,
+      "hallucinated_entries": 1,
+      "expected_facts": 2,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 2, \"hallucinated_entries\": 1, \"expected_facts\": 2, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.82958145900011,
+      "latency_total_s": 1.084667791999891,
+      "input_tokens": 200,
+      "output_tokens": 71,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-11-forecast-rule",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 1,
+      "expected_facts": 3,
+      "errors": [
+        "Third entry adds unsupported claim 'a budget increase is not confirmed'"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 1, \"expected_facts\": 3, \"errors\": [\"Third entry adds unsupported claim 'a budget increase is not confirmed'\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.1535173329993995,
+      "latency_total_s": 2.5924981249991106,
+      "input_tokens": 216,
+      "output_tokens": 204,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-18-horizon-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 0,
+      "expected_facts": 3,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":3,\"hallucinated_entries\":0,\"expected_facts\":3,\"errors\":[],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.8630075830005808,
+      "latency_total_s": 1.1658972919994994,
+      "input_tokens": 216,
+      "output_tokens": 45,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "meshline-capacity",
+    "session_id": "2026-08-25-report-recipient",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\":0,\"recalled_facts\":4,\"hallucinated_entries\":0,\"expected_facts\":4,\"errors\":[],\"duplicate_entries\":0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.6438269999998738,
+      "latency_total_s": 0.8576840839996294,
+      "input_tokens": 277,
+      "output_tokens": 37,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-06-kpi-review",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 2,
+      "expected_facts": 5,
+      "errors": [
+        "'RAN project only about East cluster / do not generalize' is not supported by expected facts",
+        "'Do not infer Aditi approves every network change' is not supported by expected facts"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 2, \"expected_facts\": 5, \"errors\": [\"'RAN project only about East cluster / do not generalize' is not supported by expected facts\", \"'Do not infer Aditi approves every network change' is not supported by expected facts\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 4.91337108299922,
+      "latency_total_s": 11.699377957998877,
+      "input_tokens": 326,
+      "output_tokens": 135,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-13-alarm-routing",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 6,
+      "hallucinated_entries": 2,
+      "expected_facts": 6,
+      "errors": [
+        "Entry about the project being only East-cluster-specific is not among the expected facts (hallucination).",
+        "Entry warning not to infer Aditi approves every network change is not among the expected facts (hallucination).",
+        "Entry 7 adds an on-call engineer acknowledgment detail beyond the expected fact, but its core routing claim matches."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 6, \"hallucinated_entries\": 2, \"expected_facts\": 6, \"errors\": [\"Entry about the project being only East-cluster-specific is not among the expected facts (hallucination).\", \"Entry warning not to infer Aditi approves every network change is not among the expected facts (hallucination).\", \"Entry 7 adds an on-call engineer acknowledgment detail beyond the expected fact, but its core routing claim matches.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 2.580295791998651,
+      "latency_total_s": 3.3031367089988635,
+      "input_tokens": 382,
+      "output_tokens": 355,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-20-review-reschedule",
+    "writer_json_valid": false,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "error": "Writer JSON invalid; store unchanged"
+    },
+    "call": null
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "northstar-ran",
+    "session_id": "2026-10-27-rollout-scope",
+    "writer_json_valid": false,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "error": "Writer JSON invalid; store unchanged"
+    },
+    "call": null
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-08-intake",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 3,
+      "hallucinated_entries": 1,
+      "expected_facts": 3,
+      "errors": [
+        "Entry 'Do not treat every person mentioned in a ticket as an escalation owner' is a general instruction not supported by the expected facts; counted as hallucinated."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 3, \"hallucinated_entries\": 1, \"expected_facts\": 3, \"errors\": [\"Entry 'Do not treat every person mentioned in a ticket as an escalation owner' is a general instruction not supported by the expected facts; counted as hallucinated.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.0022811250000814,
+      "latency_total_s": 1.3405565840002964,
+      "input_tokens": 243,
+      "output_tokens": 137,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-11-alerting",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 2,
+      "expected_facts": 4,
+      "errors": [
+        "'Do not treat every person mentioned in a ticket as an escalation owner' is not supported by expected facts",
+        "'PagerDuty has not been chosen...' is not supported by expected facts"
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 2, \"expected_facts\": 4, \"errors\": [\"'Do not treat every person mentioned in a ticket as an escalation owner' is not supported by expected facts\", \"'PagerDuty has not been chosen...' is not supported by expected facts\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.016371749999962,
+      "latency_total_s": 1.450269875000231,
+      "input_tokens": 304,
+      "output_tokens": 140,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-18-owner-change",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 4,
+      "hallucinated_entries": 0,
+      "expected_facts": 4,
+      "errors": [],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 4, \"hallucinated_entries\": 0, \"expected_facts\": 4, \"errors\": [], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 0.5967012500004785,
+      "latency_total_s": 0.8570339580001018,
+      "input_tokens": 302,
+      "output_tokens": 47,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  },
+  {
+    "model": "openrouter:qwen3.8-max",
+    "thread_id": "signalforge-rf",
+    "session_id": "2026-09-25-delivery",
+    "writer_json_valid": true,
+    "judge_model": "z-ai/glm-5.3",
+    "score": {
+      "stale_entries": 0,
+      "recalled_facts": 5,
+      "hallucinated_entries": 3,
+      "expected_facts": 5,
+      "errors": [
+        "Entry 'Do not treat every person mentioned in a ticket as an escalation owner' is not supported by expected facts.",
+        "Entry 'do not mirror alerts to the executive channel' adds unsupported detail.",
+        "Entry about PagerDuty not being an alert destination is unsupported."
+      ],
+      "duplicate_entries": 0
+    },
+    "call": {
+      "raw_content": "{\"stale_entries\": 0, \"recalled_facts\": 5, \"hallucinated_entries\": 3, \"expected_facts\": 5, \"errors\": [\"Entry 'Do not treat every person mentioned in a ticket as an escalation owner' is not supported by expected facts.\", \"Entry 'do not mirror alerts to the executive channel' adds unsupported detail.\", \"Entry about PagerDuty not being an alert destination is unsupported.\"], \"duplicate_entries\": 0}",
+      "reasoning_content": "",
+      "latency_ttft_s": 1.2671554580010707,
+      "latency_total_s": 2.7986025419995713,
+      "input_tokens": 373,
+      "output_tokens": 143,
+      "retries": 0,
+      "json_valid": true,
+      "error": null
+    }
+  }
+]
