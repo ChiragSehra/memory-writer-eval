@@ -102,7 +102,9 @@ uv run memory-eval score-blind scoring/blind_sheet.csv --judge gemini-4-argon
 The second judge sees each entry and its full transcript history, but never the
 model identity key. Its verdicts go to `scoring/second_judge_scores.csv` and
 can be resumed after interruption. Review the evidence quotes and uncertain
-verdicts manually; this model score does not replace human scoring.
+verdicts manually; this model score does not replace human scoring. Because
+Gemini is also a writer target, its own writer rows are self-judged even though
+it is independent of the primary GLM judge.
 
 To count unsupported facts over actual writes, including entries that were
 subsequently updated or removed:
