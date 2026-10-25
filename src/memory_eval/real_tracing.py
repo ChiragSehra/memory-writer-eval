@@ -87,8 +87,8 @@ def _trace(row: dict[str, str], judge: MemoryWriter) -> dict[str, str]:
         for evidence in verdict["evidence"]:
             if not isinstance(evidence, dict) or set(evidence) != {"message_id", "quote"} or not isinstance(evidence["quote"], str) or not evidence["quote"] or evidence["quote"] not in user_messages.get(evidence["message_id"], ""):
                 raise ValueError("Trace quote is not an exact substring of its user message")
-        if verdict["support"] == "supported" and not verdict["evidence"]:
-            raise ValueError("Supported trace lacks user evidence")
+        if verdict["support"] in {"supported", "partial"} and not verdict["evidence"]:
+            raise ValueError("Supported or partial trace lacks user evidence")
         result.update(support=verdict["support"], evidence_json=json.dumps(verdict["evidence"], ensure_ascii=False), reason=verdict["reason"])
     except Exception as exc:
         result["error"] = f"{type(exc).__name__}: {exc}"
@@ -141,13 +141,36 @@ def score_trace_sheet(sheet: str | Path, output: str | Path, config: dict[str, A
     return destination
 
 
-def report_traces(key: str | Path, traces: str | Path, output: str | Path) -> Path:
-    with Path(key).open(newline="") as file:
-        identities = {row["row_id"]: row for row in csv.DictReader(file)}
-    with Path(traces).open(newline="") as file:
-        judgments = {row["row_id"]: row for row in csv.DictReader(file)}
-    if not set(judgments).issubset(identities):
-        raise ValueError("Trace key mismatch")
+def _unique_rows(path: str | Path) -> dict[str, dict[str, str]]:
+    with Path(path).open(newline="") as file:
+        rows = list(csv.DictReader(file))
+    ids = [row["row_id"] for row in rows]
+    if any(not row_id for row_id in ids) or len(ids) != len(set(ids)):
+        raise ValueError(f"Missing or duplicate trace row IDs in {path}")
+    return {row["row_id"]: row for row in rows}
+
+
+def report_traces(sheet: str | Path, key: str | Path, traces: str | Path, output: str | Path) -> Path:
+    inputs = _unique_rows(sheet)
+    identities = _unique_rows(key)
+    judgments = _unique_rows(traces)
+    if inputs.keys() != identities.keys() or not set(judgments).issubset(inputs):
+        raise ValueError("Trace sheet, key, and scores disagree on row IDs")
+    for row_id, verdict in judgments.items():
+        if verdict["input_sha256"] != _digest(inputs[row_id]):
+            raise ValueError(f"Trace score does not match sheet content for row {row_id}")
+        if verdict["error"]:
+            continue
+        if verdict["support"] not in {"supported", "partial", "unsupported"}:
+            raise ValueError(f"Invalid trace support for row {row_id}")
+        evidence = json.loads(verdict["evidence_json"])
+        if not isinstance(evidence, list) or (verdict["support"] in {"supported", "partial"} and not evidence):
+            raise ValueError(f"Invalid trace evidence for row {row_id}")
+        messages = json.loads(inputs[row_id]["messages_json"])
+        user_messages = {message["message_id"]: message["content"] for message in messages if message["role"] == "user"}
+        for citation in evidence:
+            if not isinstance(citation, dict) or set(citation) != {"message_id", "quote"} or not isinstance(citation["quote"], str) or not citation["quote"] or citation["quote"] not in user_messages.get(citation["message_id"], ""):
+                raise ValueError(f"Invalid user-message quote for row {row_id}")
     totals: dict[str, Counter[str]] = defaultdict(Counter)
     for row_id, identity in identities.items():
         model = identity["model"]
