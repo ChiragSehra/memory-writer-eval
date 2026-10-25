@@ -60,6 +60,8 @@ class BeamTests(unittest.TestCase):
             self.assertEqual(json.loads(output.with_name("answers_metadata.json").read_text())["final_memory_entries"], 1)
             self.assertIn('"new"', FakeReader.last_messages[1]["content"])
             self.assertNotIn('"old"', FakeReader.last_messages[1]["content"])
+            with patch("memory_eval.beam.MemoryWriter", FakeReader):
+                answer_beam_probes(run, questions, config, "writer", "local", root / "answers.json", 2)
 
             rows = json.loads((run / "results.json").read_text())
             (run / "results.json").write_text(json.dumps(list(reversed(rows))))
@@ -71,6 +73,13 @@ class BeamTests(unittest.TestCase):
             (run / "results.json").write_text(json.dumps(rows))
             with self.assertRaisesRegex(ValueError, "duplicate or missing batches"):
                 answer_beam_probes(run, questions, config, "writer", "local", root / "bad_answers.json", 2)
+
+            rows[1]["session_id"] = "batch-02"
+            rows[1]["memory_after"] = [{"content": "changed"}]
+            (run / "results.json").write_text(json.dumps(rows))
+            with patch("memory_eval.beam.MemoryWriter", FakeReader):
+                with self.assertRaisesRegex(ValueError, "different questions, memory, writer, or reader"):
+                    answer_beam_probes(run, questions, config, "writer", "local", root / "answers.json", 2)
 
     def test_exploratory_rubric_score_has_explicit_scope(self):
         with tempfile.TemporaryDirectory() as root:

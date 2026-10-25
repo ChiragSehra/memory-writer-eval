@@ -90,17 +90,43 @@ def answer_beam_probes(run_dir: str | Path, questions_json: str | Path, config: 
         raise ValueError("BEAM writer results have duplicate or missing batches")
     final = rows[batch_numbers.index(len(rows))]
     memory = [entry["content"] for entry in final["memory_after"]]
+    memory_sha256 = hashlib.sha256(json.dumps(memory, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
     questions_path = Path(questions_json)
     questions = json.loads(questions_path.read_text())
+    questions_sha256 = hashlib.sha256(questions_path.read_bytes()).hexdigest()
+    destination = Path(output)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    metadata_path = destination.with_name(destination.stem + "_metadata.json")
+    if destination.exists():
+        if not metadata_path.exists():
+            raise ValueError("Existing BEAM answers lack source metadata; use a new output path")
+        previous_metadata = json.loads(metadata_path.read_text())
+        if any(previous_metadata.get(key) != value for key, value in {
+            "writer_model": writer_name,
+            "reader_model": reader_name,
+            "questions_sha256": questions_sha256,
+            "final_memory_sha256": memory_sha256,
+        }.items()):
+            raise ValueError("Existing BEAM answers belong to different questions, memory, writer, or reader")
     settings = dict(configured_writers(config))
     if reader_name not in settings:
         raise ValueError(f"Reader model is not configured: {reader_name}")
     runtime = {**config["runtime"], "max_output_tokens": 1000, "reasoning_effort": "low", "request_timeout_s": 180}
     reader = MemoryWriter(reader_name, settings[reader_name], runtime)
-    destination = Path(output)
-    destination.parent.mkdir(parents=True, exist_ok=True)
     answers: dict[str, list[dict[str, str]]] = json.loads(destination.read_text()) if destination.exists() else {}
     usage = {"input_tokens": 0, "output_tokens": 0, "completed_calls": 0, "failed_calls": 0}
+    base_metadata = {
+        "run_dir": str(run_path),
+        "writer_model": writer_name,
+        "reader_model": reader_name,
+        "questions_sha256": questions_sha256,
+        "final_memory_sha256": memory_sha256,
+        "writer_sessions": len(rows),
+        "final_memory_entries": len(memory),
+        "question_count": sum(len(probes) for probes in questions.values()),
+        "scope": "Memory-only BEAM pilot; official scorer not run here",
+    }
+    write_json(metadata_path, {**base_metadata, "answered_count": sum(bool(record.get("llm_response")) for saved in answers.values() for record in saved), "new_call_usage": usage})
     for category, probes in questions.items():
         saved = answers.setdefault(category, [])
         if len(saved) > len(probes):
@@ -129,18 +155,7 @@ def answer_beam_probes(run_dir: str | Path, questions_json: str | Path, config: 
             else:
                 saved.append(record)
             write_json(destination, answers)
-    write_json(destination.with_name(destination.stem + "_metadata.json"), {
-        "run_dir": str(run_path),
-        "writer_model": writer_name,
-        "reader_model": reader_name,
-        "questions_sha256": hashlib.sha256(questions_path.read_bytes()).hexdigest(),
-        "writer_sessions": len(rows),
-        "final_memory_entries": len(memory),
-        "question_count": sum(len(probes) for probes in questions.values()),
-        "answered_count": sum(bool(record.get("llm_response")) for saved in answers.values() for record in saved),
-        "new_call_usage": usage,
-        "scope": "Memory-only BEAM pilot; official scorer not run here",
-    })
+    write_json(metadata_path, {**base_metadata, "answered_count": sum(bool(record.get("llm_response")) for saved in answers.values() for record in saved), "new_call_usage": usage})
     return destination
 
 
