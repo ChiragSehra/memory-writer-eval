@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 
 from memory_eval.io import load_threads
-from memory_eval.real_tracing import _trace, export_trace_sheet
+from memory_eval.real_tracing import _digest, _trace, export_trace_sheet, report_traces
 from memory_eval.types import CallResult
 
 
@@ -57,6 +57,45 @@ class RealTracingTests(unittest.TestCase):
                 row = next(csv.DictReader(file))
             self.assertNotIn("model", row)
             self.assertEqual(json.loads(row["messages_json"])[0]["message_id"], "m1")
+
+    def test_report_rejects_stale_scores_and_non_user_quotes(self):
+        with tempfile.TemporaryDirectory() as root:
+            root = Path(root)
+            sheet = root / "traces.csv"
+            key = root / "key.csv"
+            scores = root / "scores.csv"
+            row = {"row_id": "1", "entry": "Use Friday", "checkpoint_session": "s1", "messages_json": json.dumps([
+                {"message_id": "u1", "role": "user", "content": "Use Friday."},
+                {"message_id": "a1", "role": "assistant", "content": "Use Saturday."},
+            ])}
+            with sheet.open("w", newline="") as file:
+                writer = csv.DictWriter(file, fieldnames=row)
+                writer.writeheader()
+                writer.writerow(row)
+            with key.open("w", newline="") as file:
+                writer = csv.DictWriter(file, fieldnames=["row_id", "model"])
+                writer.writeheader()
+                writer.writerow({"row_id": "1", "model": "writer"})
+            score = {"row_id": "1", "input_sha256": _digest(row), "judge_model": "judge", "support": "supported", "evidence_json": json.dumps([{"message_id": "u1", "quote": "Use Friday."}]), "reason": "User said it.", "error": ""}
+
+            def save_score():
+                with scores.open("w", newline="") as file:
+                    writer = csv.DictWriter(file, fieldnames=score)
+                    writer.writeheader()
+                    writer.writerow(score)
+
+            save_score()
+            report = report_traces(sheet, key, scores, root / "report.md")
+            self.assertIn("1/1", report.read_text())
+            score["input_sha256"] = "stale"
+            save_score()
+            with self.assertRaisesRegex(ValueError, "does not match sheet content"):
+                report_traces(sheet, key, scores, root / "report.md")
+            score["input_sha256"] = _digest(row)
+            score["evidence_json"] = json.dumps([{"message_id": "a1", "quote": "Use Saturday."}])
+            save_score()
+            with self.assertRaisesRegex(ValueError, "Invalid user-message quote"):
+                report_traces(sheet, key, scores, root / "report.md")
 
 
 if __name__ == "__main__":

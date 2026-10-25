@@ -86,6 +86,7 @@ def main() -> None:
     trace_score.add_argument("--judge", required=True)
     trace_score.add_argument("--output", default="scoring/trace_scores.csv")
     trace_report = commands.add_parser("report-traces", help="Summarize message-level provenance coverage.")
+    trace_report.add_argument("sheet")
     trace_report.add_argument("key")
     trace_report.add_argument("scores")
     trace_report.add_argument("--output", default="scoring/real_trace_report.md")
@@ -172,7 +173,7 @@ def main() -> None:
     elif args.command == "score-traces":
         print(score_trace_sheet(args.sheet, args.output, config, args.judge))
     elif args.command == "report-traces":
-        print(report_traces(args.key, args.scores, args.output))
+        print(report_traces(args.sheet, args.key, args.scores, args.output))
     elif args.command == "import-beam":
         print(import_beam_chat(args.chat_json, args.output, args.chat_id))
     elif args.command == "answer-beam":

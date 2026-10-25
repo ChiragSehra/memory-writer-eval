@@ -159,7 +159,8 @@ uv run memory-eval export-traces scoring/write_sheet.csv \
   scoring/write_sheet_key.csv --input data/transcripts
 uv run memory-eval score-traces scoring/trace_sheet.csv \
   --judge gemini-4-argon
-uv run memory-eval report-traces scoring/write_sheet_key.csv \
+uv run memory-eval report-traces scoring/trace_sheet.csv \
+  scoring/write_sheet_key.csv \
   scoring/trace_scores.csv
 ```
 
