@@ -1,0 +1,6 @@
+{
+  "thread_id": "northstar-ran",
+  "session_id": "2026-10-06-kpi-review",
+  "sequence": 1,
+  "transcript": "# Northstar RAN weekly review — 2026-10-06\n\n**User (Maya):** I own radio-performance analytics for Northstar Telecom's East cluster. This project is only about the East cluster; don't generalize it to the rest of the company.\n**Assistant:** Got it. What should I optimize for?\n**User:** In the Tuesday 10:00 IST KPI escalation review, the two metrics we lead with are dropped-call rate and setup-success rate. Put East first in the summary. The actual review is led by Aditi from network operations.\n**Tool — `network.query`:** `week=40 dropped_call_rate=0.83% setup_success=98.7%`\n**Assistant:** I can infer that Aditi approves every network change.\n**User:** No—don't infer approval authority from that. Also, my coffee spilled all over the desk this morning, so I'm stepping away for ten minutes.\n"
+}

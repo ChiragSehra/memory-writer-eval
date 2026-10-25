@@ -1,0 +1,6 @@
+{
+  "thread_id": "signalforge-rf",
+  "session_id": "2026-09-25-delivery",
+  "sequence": 4,
+  "transcript": "# SignalForge RF investigation — delivery detail\n\n**User (Priya):** For this investigation, publish the weekly handover-anomaly digest by 16:00 IST every Friday. Send it to Meera and the `#rf-ops` channel.\n**Assistant:** Should I also send it to the executive channel?\n**User:** No. Nothing authorizes that. The alert routing remains `#rf-ops` too, but the digest schedule is a separate fact.\n**Tool — `calendar.find`:** `SignalForge Handover Digest Fridays 16:00 IST attendees=Meera,#rf-ops`\n"
+}

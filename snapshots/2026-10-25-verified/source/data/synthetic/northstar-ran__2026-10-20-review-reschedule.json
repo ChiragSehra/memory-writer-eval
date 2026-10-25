@@ -1,0 +1,6 @@
+{
+  "thread_id": "northstar-ran",
+  "session_id": "2026-10-20-review-reschedule",
+  "sequence": 3,
+  "transcript": "# Northstar RAN scheduling correction — 2026-10-20\n\n**User (Maya):** Correction to the saved weekly-review detail: starting next week it moves from Tuesday to Wednesday, still 10:00 IST. Aditi still leads it.\n**Assistant:** I’ll update Tuesday to Wednesday.\n**User:** Yes. And to repeat the stable part, dropped-call rate and setup-success rate are still the two lead metrics. Do not add a second copy of that fact.\n**Assistant:** I think latency is probably the third lead metric.\n**User:** It is sometimes discussed, but I did not say it is a lead metric. We had pizza after the meeting; ignore that too.\n"
+}

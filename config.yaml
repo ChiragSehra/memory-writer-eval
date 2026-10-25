@@ -17,18 +17,19 @@ openrouter:
       model: z-ai/glm-5.3-flash
       supports_json_mode: true
       json_mode: json_schema
-      pricing_usd_per_million_tokens: {input: 0.0058, output: 0.193}
+      pricing_usd_per_million_tokens: {input: 0.15, output: 0.5}
     - name: glm-5.3
       model: z-ai/glm-5.3
       supports_json_mode: true
       json_mode: json_schema
+      reasoning_effort: low
       pricing_usd_per_million_tokens: {input: 0.079, output: 1.4}
-    - name: minimax-m3.1-flash-free
-      model: minimax/minimax-m3.1-flash:free
+    - name: minimax-m3.1-flash
+      model: minimax/minimax-m3.1-flash
       supports_json_mode: true
       json_mode: json_object
-      pricing_usd_per_million_tokens: {input: 0, output: 0}
-    # Paid frontier panel. Prices are current OpenRouter list prices captured 2026-10-22,
+      pricing_usd_per_million_tokens: {input: 0.15, output: 0.6}
+    # Prices checked against the OpenRouter model catalog on 2026-10-25,
     # in USD per million input/output tokens; refresh from /api/v1/models before a large run.
     - name: claude-opus-5.5
       model: anthropic/claude-opus-5.5
@@ -58,8 +59,9 @@ openrouter:
 judge:
   # `name` must match one of openrouter.models above.
   name: glm-5.3
-  max_output_tokens: 300
-runtime:
   max_output_tokens: 1000
+  reasoning_effort: low
+runtime:
+  max_output_tokens: 1500
   temperature: 0
   request_timeout_s: 45

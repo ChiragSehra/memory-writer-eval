@@ -57,6 +57,9 @@ class MemoryWriter:
             "max_tokens": self.runtime.get("max_output_tokens", 1000),
             "extra_body": self._extra_body(),
         }
+        reasoning_effort = self.runtime.get("reasoning_effort") or self.settings.get("reasoning_effort")
+        if reasoning_effort:
+            request["reasoning_effort"] = reasoning_effort
         if json_mode and self.settings.get("supports_json_mode", True):
             request["response_format"] = response_format or self._response_format()
         stream = self.client.chat.completions.create(**request)

@@ -1,0 +1,6 @@
+{
+  "thread_id": "northstar-ran",
+  "session_id": "2026-10-27-rollout-scope",
+  "sequence": 4,
+  "transcript": "# Northstar RAN rollout planning — 2026-10-27\n\n**User (Maya):** Please retain this release constraint: the Q4 antenna-tilt automation rollout is limited to Pune and Hyderabad. No other market is approved yet.\n**Assistant:** That sounds like a national rollout next quarter.\n**User:** No. That would be an inference. The scope is only Pune and Hyderabad. Also, use the existing East-first summary order when you draft the change note.\n**Tool — `change.lookup`:** `CHG-4821 status=approved scope=Pune,Hyderabad`\n"
+}

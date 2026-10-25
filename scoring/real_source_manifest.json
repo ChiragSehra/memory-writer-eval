@@ -1,0 +1,29 @@
+{
+  "dataset": "allenai/WildChat-1M",
+  "revision": "7d6490e462285cf85d91eabea0f9a954fbddcd1f",
+  "viewer_endpoint": "https://datasets-server.huggingface.co/rows",
+  "selection": "Convenience sample of three English, non-toxic, non-redacted multi-turn conversations; not representative",
+  "rows": [
+    {
+      "row_idx": 40060,
+      "conversation_hash": "08d5799339e9a5f1f985f8166f2e527d",
+      "turns": 5,
+      "message_count": 10,
+      "content_sha256": "735070522246ebd5ff3335f7880702587cc2d0e34b5b50686370e6ecf96e86f1"
+    },
+    {
+      "row_idx": 425041,
+      "conversation_hash": "f2aaffea58b70445ba519ccf2372e605",
+      "turns": 3,
+      "message_count": 6,
+      "content_sha256": "8555551363d1ab4e95f39bd37af3d84f53cb91c2a80391dedb8d444eb92bcd95"
+    },
+    {
+      "row_idx": 75054,
+      "conversation_hash": "d721f3b3f3401cb989182a953502d1ea",
+      "turns": 4,
+      "message_count": 8,
+      "content_sha256": "24af0c357bf5d068efec38da180260de0f063f62f5184088223595af8292cf11"
+    }
+  ]
+}

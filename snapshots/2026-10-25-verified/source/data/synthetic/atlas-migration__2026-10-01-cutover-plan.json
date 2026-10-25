@@ -1,0 +1,6 @@
+{
+  "thread_id": "atlas-migration",
+  "session_id": "2026-10-01-cutover-plan",
+  "sequence": 1,
+  "transcript": "# Atlas migration planning — 2026-10-01\n\n**User (Riya):** I lead the Atlas migration. We have one production cutover: 12 November at 21:00 IST, using the blue deployment. Neha coordinates it. Roll back if the error rate exceeds 2%.\n**Assistant:** I will remember the cutover plan and rollback threshold.\n**Tool — `calendar.search`:** `Atlas migration dry run 2026-11-05`.\n"
+}
