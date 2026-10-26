@@ -18,3 +18,4 @@ scoring/*.csv
 !scoring/.gitkeep
 FOLLOW_UP_DRAFT.md
 TODO.md
+X_REPLIES.md
