@@ -16,3 +16,5 @@ data/beam/*
 data/beam_sessions/*
 scoring/*.csv
 !scoring/.gitkeep
+FOLLOW_UP_DRAFT.md
+TODO.md
