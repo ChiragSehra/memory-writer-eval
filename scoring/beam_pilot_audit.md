@@ -1,0 +1,9 @@
+# BEAM pilot evidence audit (2026-10-26)
+
+The local source file matches the SHA-256 in `data/beam_sessions/.beam-manifest`, and the local question file matches `scoring/beam_answers_metadata.json`. The source contains 10 ordered batches, 1,710 user/assistant messages, and 4,246,095 message-content characters. These files remain Git-ignored; the audit records their metadata, not conversation text.
+
+The saved writer run contains one result for each batch, all 10 writer calls returned valid JSON, and the final store contains 107 entries. The sum of provider-reported writer input tokens is 1,021,674. This is **cumulative input across calls**, including prompts and carried memory; it is not a measurement of unique source tokens. The source was obtained from BEAM's 1M-labeled chat split.
+
+The 20 saved answers and 20 rubric records match the 20 local official probe questions by category and question text. All 75 nugget scores are present; each saved question score equals the mean of its nugget scores. Averaging the 20 question scores reproduces **60.8%**. This is the project's exploratory memory-only rubric, **not** BEAM's official evaluation result or a cross-model ranking.
+
+The original saved answer metadata predates a final-memory hash, and the rubric records predate per-input hashes. Matching question text and arithmetic cannot prove that their calls used the exact saved final store and candidate answers. Future `answer-beam` output now binds the final memory and question file, and future `score-beam-pilot` records bind question, ideal answer, rubric, and candidate answer with `input_sha256`. A changed input is rejected or rescored rather than silently reusing a stale result. The current historical score remains explicitly provisional unless rerun under those stronger bindings.

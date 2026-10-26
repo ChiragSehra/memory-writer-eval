@@ -1,0 +1,119 @@
+{
+  "created_at_ist": "2026-10-25T20:32:33.045032+05:30",
+  "run_dir": "runs/20261025-verified-snapshot",
+  "git_head": "043f658478839a5f611913f6a3e09dce897f0082",
+  "source_hashes": {
+    "src/memory_eval/__init__.py": "7f3960283e443472fc1e26b2b15204388a51772956c7c733091fa4c285d86ecc",
+    "src/memory_eval/beam.py": "86a2789ebf3b3168be099c1fc89a65d8bfa4c3c0ab35df6e0c4a72e645d047bd",
+    "src/memory_eval/blind_judge.py": "cf080a873f97bf9c13943bb4613ba1f5202099e88dc3bf1ab55e51507772d7f8",
+    "src/memory_eval/checkpoint_review.py": "4278eaf4e2d72d7c80a0ed3df12f37d258cfcb782033244860f3e8a639d78e33",
+    "src/memory_eval/cli.py": "d1029486bf70399953ecdfd7162848c570ecae15d92be5bf258ade0f5401c0d4",
+    "src/memory_eval/config.py": "1bdbfcd8b3d75754b0fb7c4d75d8b376cf99ba9fe2cc81ef01f2ce9f466e78c2",
+    "src/memory_eval/failure_types.py": "12f15b9dc2b1fda43c19bd1c0ec5ae3cd1a8d91dc9a05b47feb81e9d5f8dd543",
+    "src/memory_eval/io.py": "c541e636c800a80b9ba4d8baa59fe4731821c6185ad62a59cc8e495be52d1c8a",
+    "src/memory_eval/judge.py": "b6294fb39d3ed142b129fc032a611bab9371a4cf21f8c60f43b5643ff371be13",
+    "src/memory_eval/memory.py": "0aab12b9432016f448a6dfc8517bfc23f6cf460790ce48434c28d8a7e3ec6a67",
+    "src/memory_eval/real_tracing.py": "d3349ac6903ed024265f29cf9b835a3859df2db36275e8011d4b5ef004709a36",
+    "src/memory_eval/runner.py": "4fd833a8d828ef740491896546833f8a2985e46f2debf99a0cfa1df7b92f12c6",
+    "src/memory_eval/scoring.py": "4f3988ee03ce9df280d0b85ab719886e110abf4dcef000d5c0ced2bd5b1b6e86",
+    "src/memory_eval/snapshot.py": "ba888077661cb35ac5794e2ce05423d5e438a576b6c4c1d015e122a3265b169f",
+    "src/memory_eval/synthetic.py": "1572233e0db506a374d0319b736ca72ba9e97adc97a43049b7fe585ce7cb1092",
+    "src/memory_eval/types.py": "d006bf7746332b346824baa937a3628bfa52a15cbd97bc970ee2f39874c7c986",
+    "src/memory_eval/write_metrics.py": "247cffe7e723923e02d462cd7ac8e79a729a63a5d593b1c686ae30bef176f05a",
+    "src/memory_eval/writer.py": "8373369dbab7a575b20bf30159a20f62693c8f2dd3c4e97ab545753178fc3d38",
+    "data/synthetic/atlas-migration__2026-10-01-cutover-plan.json": "1a29d8a0ecac8b2c2e4bd080a531218c357169f75850bdca8e700559e8261a6a",
+    "data/synthetic/atlas-migration__2026-10-08-cutover-brief.json": "caa164912532299fd8ba0b2477adf01a3774ca80dcc7d6cd22758f1d864043e4",
+    "data/synthetic/atlas-migration__ground_truth.json": "6e29a665b2ff865117f4b4d9d3299993c2deba453054a9d16992a1e297f2d2f2",
+    "data/synthetic/meshline-capacity__2026-08-04-planning-baseline.json": "6f4c695ab9583d0a9f398c371e4c558328690e6b833a256d8fd3891af30650d9",
+    "data/synthetic/meshline-capacity__2026-08-11-forecast-rule.json": "6a0f617791ff236fcce07582ae5a55bb93e856b7842ef091b9647776c36a9053",
+    "data/synthetic/meshline-capacity__2026-08-18-horizon-change.json": "c54f2f4077087b198e26b431e484eeb392f5fe71f363d3c323545b277e6f9390",
+    "data/synthetic/meshline-capacity__2026-08-25-report-recipient.json": "3e6a4fc1c88b0b89db83c2c34f20bd9cf3f86bc75967092aac1785b12581230b",
+    "data/synthetic/meshline-capacity__ground_truth.json": "d62622d052dbdd7d894f2d052b1bcb6f763f4d02fdf07fb53befb0b9319396da",
+    "data/synthetic/northstar-ran__2026-10-06-kpi-review.json": "5712e140773eaac3536cf71484f925862dadbc3d96ebb7b31a210762738604db",
+    "data/synthetic/northstar-ran__2026-10-13-alarm-routing.json": "ddd6155263495f4c993187cffd9aefa6d333279dcc689c4b85b7e6e08e627c01",
+    "data/synthetic/northstar-ran__2026-10-20-review-reschedule.json": "8d6255c4c93372667fb43a5b60f50e3a52755e30b0998789e469a606ac4c30e1",
+    "data/synthetic/northstar-ran__2026-10-27-rollout-scope.json": "1a39dfa38b4ed3aec11c942501f9596b3fa7d8f04ca02bf9be49dd8287e89253",
+    "data/synthetic/northstar-ran__ground_truth.json": "73faf6894543f0554457e641b8ac66799f04bf4009d70a9d6e82ad117867539e",
+    "data/synthetic/signalforge-rf__2026-09-08-intake.json": "17a95e1adea2ab9a98416160f87d17db11a24fd0c60886482accabb787effaa0",
+    "data/synthetic/signalforge-rf__2026-09-11-alerting.json": "43f5041d38a0c9f14ec6249a5c3d6b89babcaca9a0cc863df9efbfe937f3bb5a",
+    "data/synthetic/signalforge-rf__2026-09-18-owner-change.json": "10226b236bfee71904855dfb6631b39ea291a8038c8de4d0848063d53a7ffb6d",
+    "data/synthetic/signalforge-rf__2026-09-25-delivery.json": "22352a46565e11f58c857627e12acba2829d3b2805d8c8cba9b5557c0428e833",
+    "data/synthetic/signalforge-rf__ground_truth.json": "7a29378b5372d00b877f796369cbf0d868dca3e2f2eee1947f97a7b0600704f7",
+    "prompts/memory_writer.md": "f5e7bd5d949bcd5aa734dc5baf672b3d9a2700c5e208eab90c54c0ef4bf51f2d",
+    "config.yaml": "fd6b98d34542bf2333723986c59d1c332b63832e4e6c4463c46b40b9e1465dd8",
+    "pyproject.toml": "64fb257055717288a2b86723ffd95007f261577ad0c2d79c3b723f642621080a"
+  },
+  "artifact_hashes": {
+    "results.json": "13a9613d593b2de1648482f4f939e65951e73c2302e6477f3b07009d58882aee",
+    "report.md": "13f66a930649a0a980482ab0e392de518b1916893c84e19234adee7f199fecf1",
+    "synthetic_scores.json": "e97c001eb9d3acefb4d87610264789d31187d6399fe5bb30f101aca59fddaf20",
+    "snapshot_readout.md": "2fc24c4f0b4a38219131f0f8581fd9015b8065d4a5dd47355ff12a6178000c7f",
+    "snapshot_blind_sheet.csv": "ff1b90f1e973e4809bf4ced348a41fd0b3f0e3649a4d6091dc9ae80cb9c7b9ac",
+    "snapshot_blind_sheet_key.csv": "6aedc98746e35f6e0a71de4fd82b308478beb47f43c66fe21e6bfe02d1238c9f",
+    "snapshot_blind_scores.csv": "32477c171379bf735d17cfbcece58ff76a013b868903a9694118d6df0504edbb",
+    "snapshot_write_sheet.csv": "b58793da66544d1246fe378195783cafadac0412896d9f60d56136638cfdb709",
+    "snapshot_write_sheet_key.csv": "3559d085927cc9dc8f8906ac5e318b5a4c4e0c090448e77f6d8196847420fe8d",
+    "snapshot_write_scores.csv": "114b19cc80f1c0c2907fce83262b1569e77e13e3c3284d9f0cfff7e217a0f397",
+    "snapshot_write_report.md": "5e0c91c91b6a0b8a9272eedb37f67dd4faec78cacfed14db91f0eebfc8ceab12",
+    "snapshot_checkpoint_sheet.csv": "28a8a2a0fac9861a1f911eacd3704ac27539c560394112e59a2a4a2502b916ca",
+    "snapshot_checkpoint_sheet_key.csv": "0bf44ded71b3c50b720a266d238e3b93062d853ecf3bbffef80134a9135644f2",
+    "snapshot_checkpoint_scores.csv": "d93fec5f604516ba1e6b0ad1b317ebe0eac2677cb07ab8cae3391e7e8f5c657b",
+    "snapshot_checkpoint_report.md": "81545724783882b683738f5fb5c469abc369e7caa24ec47bd566105459468a8e",
+    "snapshot_failure_types.csv": "e9908acf33cbbf929ce205bd02fef264d0b67165aa7c3008da46406ea7fe147e",
+    "snapshot_failure_type_report.md": "3ed4c2e3f45ea4db86f1ab29d2575eb86dd5587a90e44d1d11de10b23928096f"
+  },
+  "corpus": {
+    "threads": 4,
+    "sessions": 14
+  },
+  "models": [
+    {
+      "label": "local",
+      "model_id": "hy-memory-30b-a3b"
+    },
+    {
+      "label": "openrouter:glm-5.3-flash",
+      "model_id": "z-ai/glm-5.3-flash"
+    },
+    {
+      "label": "openrouter:glm-5.3",
+      "model_id": "z-ai/glm-5.3"
+    },
+    {
+      "label": "openrouter:minimax-m3.1-flash",
+      "model_id": "minimax/minimax-m3.1-flash"
+    },
+    {
+      "label": "openrouter:claude-opus-5.5",
+      "model_id": "anthropic/claude-opus-5.5"
+    },
+    {
+      "label": "openrouter:gpt-6-astra",
+      "model_id": "openai/gpt-6-astra"
+    },
+    {
+      "label": "openrouter:gemini-4-argon",
+      "model_id": "google/gemini-4-argon"
+    },
+    {
+      "label": "openrouter:grok-4.7",
+      "model_id": "x-ai/grok-4.7"
+    },
+    {
+      "label": "openrouter:qwen3.8-max",
+      "model_id": "qwen/qwen3.8-max-0902"
+    }
+  ],
+  "runtime": {
+    "max_output_tokens": 1500,
+    "temperature": 0,
+    "request_timeout_s": 45
+  },
+  "judge": {
+    "name": "glm-5.3",
+    "max_output_tokens": 1000,
+    "reasoning_effort": "low"
+  },
+  "writer_valid": 124,
+  "writer_total": 126
+}

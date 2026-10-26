@@ -1,0 +1,17 @@
+{
+  "run_dir": "runs/20261025-195535",
+  "writer_model": "openrouter:glm-5.3",
+  "reader_model": "openrouter:glm-5.3",
+  "questions_sha256": "f3e212069cb3d78b6e032efa2dbdd85530f39cc23809ef0496c3c020cac10c3c",
+  "writer_sessions": 10,
+  "final_memory_entries": 107,
+  "question_count": 20,
+  "answered_count": 20,
+  "new_call_usage": {
+    "input_tokens": 60279,
+    "output_tokens": 6653,
+    "completed_calls": 20,
+    "failed_calls": 0
+  },
+  "scope": "Memory-only BEAM pilot; official scorer not run here"
+}

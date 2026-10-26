@@ -1,0 +1,49 @@
+{
+  "thread_id": "northstar-ran",
+  "after_each_session": [
+    {
+      "session_id": "2026-10-06-kpi-review",
+      "ideal_memory": [
+        "Maya owns radio-performance analytics for Northstar Telecom's East cluster.",
+        "The Northstar East-cluster KPI escalation review is Tuesday at 10:00 IST.",
+        "Northstar East-cluster KPI escalation reviews lead with dropped-call rate and setup-success rate.",
+        "East-cluster summaries should present East first.",
+        "Aditi from network operations leads the Northstar East-cluster KPI escalation review."
+      ]
+    },
+    {
+      "session_id": "2026-10-13-alarm-routing",
+      "ideal_memory": [
+        "Maya owns radio-performance analytics for Northstar Telecom's East cluster.",
+        "The Northstar East-cluster KPI escalation review is Tuesday at 10:00 IST.",
+        "Northstar East-cluster KPI escalation reviews lead with dropped-call rate and setup-success rate.",
+        "East-cluster summaries should present East first.",
+        "Aditi from network operations leads the Northstar East-cluster KPI escalation review.",
+        "P1 radio alarms for Northstar's East cluster go to #east-ran-p1 rather than email."
+      ]
+    },
+    {
+      "session_id": "2026-10-20-review-reschedule",
+      "ideal_memory": [
+        "Maya owns radio-performance analytics for Northstar Telecom's East cluster.",
+        "The Northstar East-cluster KPI escalation review is Wednesday at 10:00 IST.",
+        "Northstar East-cluster KPI escalation reviews lead with dropped-call rate and setup-success rate.",
+        "East-cluster summaries should present East first.",
+        "Aditi from network operations leads the Northstar East-cluster KPI escalation review.",
+        "P1 radio alarms for Northstar's East cluster go to #east-ran-p1 rather than email."
+      ]
+    },
+    {
+      "session_id": "2026-10-27-rollout-scope",
+      "ideal_memory": [
+        "Maya owns radio-performance analytics for Northstar Telecom's East cluster.",
+        "The Northstar East-cluster KPI escalation review is Wednesday at 10:00 IST.",
+        "Northstar East-cluster KPI escalation reviews lead with dropped-call rate and setup-success rate.",
+        "East-cluster summaries should present East first.",
+        "Aditi from network operations leads the Northstar East-cluster KPI escalation review.",
+        "P1 radio alarms for Northstar's East cluster go to #east-ran-p1 rather than email.",
+        "The Q4 antenna-tilt automation rollout is limited to Pune and Hyderabad."
+      ]
+    }
+  ]
+}

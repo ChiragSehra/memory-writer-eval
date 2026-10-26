@@ -1,0 +1,6 @@
+{
+  "thread_id": "meshline-capacity",
+  "session_id": "2026-08-25-report-recipient",
+  "sequence": 4,
+  "transcript": "# Meshline capacity planning — report distribution\n\n**User (Daniel):** Please remember the recurring delivery rule: send the monthly capacity-planning experiment report to Leena, the finance partner, by the third business day.\n**Assistant:** Is Leena the approval owner for the project?\n**User:** I only said she is the finance recipient. Don't create an approval role. And yes, forecasts still use p95 rather than the mean—that is a repeat, not a new memory.\n**Tool — `report.template`:** `name=capacity-experiment recipient=Leena due=third-business-day`\n"
+}

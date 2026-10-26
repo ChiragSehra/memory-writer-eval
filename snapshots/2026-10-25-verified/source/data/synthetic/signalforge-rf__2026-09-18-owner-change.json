@@ -1,0 +1,6 @@
+{
+  "thread_id": "signalforge-rf",
+  "session_id": "2026-09-18-owner-change",
+  "sequence": 3,
+  "transcript": "# SignalForge RF investigation — ownership update\n\n**User (Priya):** Ownership changed: Arun is no longer the escalation owner. Meera owns SignalForge escalations now.\n**Assistant:** I will replace Arun with Meera.\n**User:** Correct. The alert rule still goes to `#rf-ops`; I'm repeating it because a previous assistant once made a duplicate memory entry.\n**Assistant:** I’ll retain two copies to be safe.\n**User:** Definitely not. One fact, one entry. I’m late for dinner, which is irrelevant.\n"
+}

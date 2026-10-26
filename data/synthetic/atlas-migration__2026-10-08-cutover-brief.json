@@ -1,0 +1,6 @@
+{
+  "thread_id": "atlas-migration",
+  "session_id": "2026-10-08-cutover-brief",
+  "sequence": 2,
+  "transcript": "# Atlas migration cutover brief — 2026-10-08\n\n**User (Riya):** The Atlas production cutover is scheduled for 19 November at 21:00 IST using the green deployment. Neha will coordinate it. Keep the rollback threshold at 2% in the readiness brief.\n**Assistant:** The dry run is on 5 November, so perhaps the cutover includes a second phase that week.\n**User:** There is one production cutover. The dry run is separate; do not save a second production phase.\n"
+}
